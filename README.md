@@ -11,7 +11,7 @@ The integration is further enhanced with the [Openfort Embedded Smart Accounts](
 - Sign in to [dashboard.openfort.xyz](http://dashboard.openfort.xyz) and create a new project.
 - You need a [Google Play Developer account](https://support.google.com/googleplay/android-developer/answer/6112435?hl=en).
 - You need a [Google Cloud project](https://developers.google.com/workspace/guides/create-project).
-- Run the [Express backend]() locally.
+- Run the [Express backend](https://github.com/openfort-xyz/sample-unity-android-embedded-signer/tree/main/backend) locally.
 - Clone or download the repository and open it with Unity [2021.3](https://unity.com/releases/editor/qa/lts-releases?version=2021.3).
   When opening the project, select ***Ignore*** on this popup:
 
@@ -64,7 +64,7 @@ A popup will appear. Copy the ***Web client ID*** and the ***Web client secret**
 
 ![Alt text](https://blog-cms.openfort.xyz/uploads/firebase_extension_unity_img_8_7d2b07af1c.png?updated_at=2023-11-07T18:41:29.178Z)
 
-Select the provider and choose ***Project Settings***. Under ***Your apps*** section select ***Add fingerprint*** and add your [SHA1 certificate fingerprint](https://github.com/openfort-xyz/firebase-extension-unity-sample/tree/main#find-sha1-certificate-fingerprint). Then choose ***Save***:
+Select the provider and choose ***Project Settings***. Under ***Your apps*** section select ***Add fingerprint*** and add your SHA1 certificate fingerprint. Then choose ***Save***:
 
 ![Alt text](https://blog-cms.openfort.xyz/uploads/firebase_extension_unity_img_26_0877bd3b91.png?updated_at=2023-11-07T18:41:44.183Z)
 
@@ -85,6 +85,12 @@ Both ***Google*** and ***Google Play*** sign-in providers are ready:
 ![Alt text](https://blog-cms.openfort.xyz/uploads/firebase_extension_unity_img_11_0a946e50ff.png?updated_at=2023-11-07T18:41:31.578Z)
 
 ## Set up Openfort
+
+### [Set up Firebase provider](https://dashboard.openfort.xyz/players/auth/providers)
+
+Enable Firebase, add your project ID and choose ***Save***:
+
+![Alt text](https://blog-cms.openfort.xyz/uploads/unity_firebase_android_embedded_4be4bc7920.png?updated_at=2024-03-19T11:22:43.865Z)
 
 ### [Add a Contract](https://dashboard.openfort.xyz/assets/new)
 
@@ -149,7 +155,7 @@ This will open the Google Cloud console. Now select ***Android*** as *Applicatio
 
 ![Alt text](https://blog-cms.openfort.xyz/uploads/firebase_extension_unity_img_20_e3286e880c.png?updated_at=2023-11-07T18:41:47.076Z)
 
-Enter your [SHA1 certificate fingerprint](https://github.com/openfort-xyz/firebase-extension-unity-sample/tree/main#find-sha1-certificate-fingerprint) and choose ***CREATE***:
+Enter your SHA1 certificate fingerprint and choose ***CREATE***:
 
 ![Alt text](https://blog-cms.openfort.xyz/uploads/firebase_extension_unity_img_21_b1c2c44246.png?updated_at=2023-11-07T18:41:34.781Z)
 
@@ -167,7 +173,7 @@ Go back to ***Configuration*** and select ***Add credential***:
 
 ![Alt text](https://blog-cms.openfort.xyz/uploads/firebase_extension_unity_img_24_b44fc158b9.png?updated_at=2023-11-07T18:41:44.287Z)
 
-Choose ***Game server***, refresh OAuth clients, select ***Web client (auto created by Google Service)*** (it was created automatically during [this process](https://github.com/openfort-xyz/firebase-extension-unity-sample/tree/main#add-google-sign-in-provider)) and select ***Save changes***:
+Choose ***Game server***, refresh OAuth clients, select ***Web client (auto created by Google Service)*** (it was created automatically during [this process](https://github.com/openfort-xyz/sample-unity-android-embedded-signer/tree/main?tab=readme-ov-file#add-google-sign-in-provider)) and select ***Save changes***:
 
 ![Alt text](https://blog-cms.openfort.xyz/uploads/firebase_extension_unity_img_25_1f76c7f29a.png?updated_at=2023-11-07T18:41:45.679Z)
 
@@ -211,11 +217,11 @@ Import it in your Unity project ***Assets*** folder to make sure every credentia
 
 ### Add Openfort Publishable Key
 
-Add your publishable key [here](https://github.com/openfort-xyz/firebase-extension-unity-sample/blob/7bcf9d6adad896e3f1d7a4bc2ed4709926fa151a/Assets/Scripts/OpenfortController.cs#L17).
+Add your publishable key [here](https://github.com/openfort-xyz/sample-unity-android-embedded-signer/blob/f370c01fe90fafa79ead1fcdf01c93a5212f5fde/unity/Assets/Scripts/OpenfortController.cs#L17).
 
 ### Add Express backend URL
 
-Add your Express backend minting URL [here](https://github.com/openfort-xyz/firebase-extension-unity-sample/blob/7bcf9d6adad896e3f1d7a4bc2ed4709926fa151a/Assets/Scripts/OpenfortController.cs#L62).
+Add your Express backend minting URL [here](https://github.com/openfort-xyz/sample-unity-android-embedded-signer/blob/f370c01fe90fafa79ead1fcdf01c93a5212f5fde/unity/Assets/Scripts/OpenfortController.cs#L62).
 
 ## Test on Android
 
@@ -224,8 +230,6 @@ Upon building and running the game on an Android device, the registration/login 
 ## Conclusion
 
 Upon completing the above steps, your Unity game will be fully integrated with Openfort Embedded Smart Accounts and Firebase and Google Play Games. Always remember to test every feature before deploying to guarantee a flawless player experience.
-
-For a deeper understanding of the underlying processes, check out the [tutorial video](https://youtu.be/3DOZhuqKdG0?feature=shared). 
 
 ## Get support
 If you found a bug or want to suggest a new [feature/use case/sample], please [file an issue](../../issues).
