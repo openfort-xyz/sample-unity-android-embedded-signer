@@ -11,7 +11,7 @@ The integration is further enhanced with the [Openfort Embedded Smart Accounts](
 - Sign in to [dashboard.openfort.xyz](http://dashboard.openfort.xyz) and create a new project.
 - You need a [Google Play Developer account](https://support.google.com/googleplay/android-developer/answer/6112435?hl=en).
 - You need a [Google Cloud project](https://developers.google.com/workspace/guides/create-project).
-- You need an [Express backend](//TODO) running.
+- Run the [Express backend]() locally.
 - Clone or download the repository and open it with Unity [2021.3](https://unity.com/releases/editor/qa/lts-releases?version=2021.3).
   When opening the project, select ***Ignore*** on this popup:
 

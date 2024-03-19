@@ -1,0 +1,12 @@
+fileFormatVersion: 2
+guid: aebe976dba8b546d18a387f44667bf35
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - fb_GUISkin: {fileID: 11400000, guid: 39a8cb353ac5c4438ba6093d7e198c3c, type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

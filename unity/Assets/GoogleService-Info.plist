@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>775020371354-66ae1v7fdfv1atbiol33u9v89d9p0t2u.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.775020371354-66ae1v7fdfv1atbiol33u9v89d9p0t2u</string>
+	<key>ANDROID_CLIENT_ID</key>
+	<string>775020371354-oprr0c122vn4jne1crs1bo0eou2525qg.apps.googleusercontent.com</string>
+	<key>API_KEY</key>
+	<string>AIzaSyConxwvesnC1G6dEydlqgGqANoWPHWsYQk</string>
+	<key>GCM_SENDER_ID</key>
+	<string>775020371354</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.google.FirebaseUnityAuthTestApp.dev</string>
+	<key>PROJECT_ID</key>
+	<string>test-openfort-extension</string>
+	<key>STORAGE_BUCKET</key>
+	<string>test-openfort-extension.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:775020371354:ios:2a30eede74c9ab8a84ae23</string>
+</dict>
+</plist>

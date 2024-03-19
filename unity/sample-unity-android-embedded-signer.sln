@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Play.Games", "Google.Play.Games.csproj", "{2c176b97-e04a-7bb8-9c75-2877062cc8ae}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly-CSharp.csproj", "{c5295c0b-188e-e8af-365b-57022c43180a}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Play.Games.Editor", "Google.Play.Games.Editor.csproj", "{6ffc7b8b-6409-1e6e-b20c-d248bd8415a8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp-Editor", "Assembly-CSharp-Editor.csproj", "{2028e535-3079-c52e-bb72-1ef49ffa5527}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp-firstpass", "Assembly-CSharp-firstpass.csproj", "{3e2b73a8-3041-bfa6-5001-fd1ffbb4c2da}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2c176b97-e04a-7bb8-9c75-2877062cc8ae}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2c176b97-e04a-7bb8-9c75-2877062cc8ae}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{c5295c0b-188e-e8af-365b-57022c43180a}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{c5295c0b-188e-e8af-365b-57022c43180a}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6ffc7b8b-6409-1e6e-b20c-d248bd8415a8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6ffc7b8b-6409-1e6e-b20c-d248bd8415a8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2028e535-3079-c52e-bb72-1ef49ffa5527}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2028e535-3079-c52e-bb72-1ef49ffa5527}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3e2b73a8-3041-bfa6-5001-fd1ffbb4c2da}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3e2b73a8-3041-bfa6-5001-fd1ffbb4c2da}.Debug|Any CPU.Build.0 = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
