@@ -6,6 +6,17 @@ Within Unity, we've integrated the Firebase SDK to facilitate backend functional
 
 The integration is further enhanced with the [Openfort Embedded Smart Accounts](https://www.openfort.xyz/blog/embedded-smart-accounts), which are created for every new Google Play Games user logged into Firebase. This enables Unity clients to directly leverage Openfort's blockchain capabilities, allowing for sophisticated blockchain interactions within the gaming environment.
 
+## Application Workflow
+
+<div align="center">
+    <img
+      width="100%"
+      height="100%"
+      src="https://blog-cms.openfort.xyz/uploads/firebase_embedded_integration_workflow_00eaa7dae2.png?updated_at=2024-03-20T10:34:17.422Z"
+      alt='Openfort Firebase Embedded workflow'
+    />
+</div>
+
 ## Prerequisites
 
 - Sign in to [dashboard.openfort.xyz](http://dashboard.openfort.xyz) and create a new project.
