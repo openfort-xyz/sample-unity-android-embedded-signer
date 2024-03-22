@@ -38,7 +38,7 @@ public class OpenfortController : MonoBehaviour
         
 		Debug.Log("Openfort Auth");
 		mOpenfort = new OpenfortSDK(PublishableKey); 
-		oauthAccessToken = await mOpenfort.AuthenticateWithOAuth(OAuthProvider.Firebase, idToken);
+		oauthAccessToken = await mOpenfort.AuthenticateWithOAuth(OAuthProvider.Firebase, idToken, TokenType.IdToken);
 		Debug.Log("Access Token: " + oauthAccessToken);
 
 		try
