@@ -32,7 +32,7 @@ public class LoginUI : MonoBehaviour
 
 	[SerializeField] float itemSpacing = .5f;
 	float itemHeight;
-	
+
 	[Space(20)]
 	[Header("Login Events")]
 	[SerializeField] GameObject loginUI;
@@ -45,7 +45,7 @@ public class LoginUI : MonoBehaviour
 	[Space(20)]
 	[Header("Scroll View")]
 	[SerializeField] ScrollRect scrollRect;
-	
+
 	[Space(20)]
 	[Header("Error messages")]
 	[SerializeField] TMP_Text ErrorText;
@@ -72,12 +72,13 @@ public class LoginUI : MonoBehaviour
 	// iOS simulators.
 	protected Firebase.Auth.FirebaseAuth auth;
 	private string authCode;
-	
+
 	/// <summary>
 	/// Openfort embedded specific
 	/// </summary>
-	private string mIdentityToken;
-	
+	private string identityToken;
+	private string accessToken;
+
 	private void Start()
 	{
 		if (!FirebaseManager.Instance.initialized)
@@ -104,11 +105,11 @@ public class LoginUI : MonoBehaviour
 		auth = fAuth;
 		Debug.Log("!!! DEBUGGING: " + auth.App);
 		SubscribeToFirebaseAuthEvents();
-				
+
 #if UNITY_ANDROID && !UNITY_EDITOR
 		AuthenticateToGooglePlayGames();
 #endif
-		
+
 		// Add button events
 		AddUIEvents();
 		//Auto scroll to selected character  in the login
@@ -423,15 +424,16 @@ public class LoginUI : MonoBehaviour
 					var user = task.Result;
 					Debug.LogFormat("User signed in successfully: {0} ({1})", user.DisplayName, user.UserId);
 
-					mIdentityToken = user.TokenAsync(false).Result;
-					Debug.Log("Identity Token: " + mIdentityToken);
+					identityToken = user.TokenAsync(false).Result;
+					accessToken = user.TokenAsync(true).Result;
+					Debug.Log("Identity Token: " + identityToken);
 					
-					OpenfortController.Instance.AuthenticateWithOAuth(mIdentityToken);
+					OpenfortController.Instance.AuthenticateWithOAuth(identityToken, accessToken);
 				});
 			});
 		});
 #else
-        Debug.Log("Google Play Games SDK only works on Android devices. Please build your app to an Android device.");
+		Debug.Log("Google Play Games SDK only works on Android devices. Please build your app to an Android device.");
 #endif
 	}
 
@@ -525,7 +527,7 @@ public class LoginUI : MonoBehaviour
 	void OpenLogin()
 	{
 		Debug.Log("OPEN LOGIN!!!!!!!!!!!");
-		if (string.IsNullOrEmpty(OpenfortController.Instance.oauthAccessToken))
+		if (string.IsNullOrEmpty(OpenfortController.Instance.accessToken))
 		{
 			loggedInUI.SetActive(false);
 			loginUI.SetActive(true);

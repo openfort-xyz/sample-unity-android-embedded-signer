@@ -9,58 +9,60 @@ using Openfort.Model;
 using Openfort.Recovery;
 using UnityEngine;
 using UnityEngine.Networking;
-
+using static Clients.Shield;
 public class OpenfortController : MonoBehaviour
 {
-    public static OpenfortController Instance { get; private set; }
-    
-    private const string PublishableKey = "YourPublishableKey";
-    private OpenfortSDK mOpenfort;
+	public static OpenfortController Instance { get; private set; }
 
-    [HideInInspector] public string oauthAccessToken;
-    
-    void Awake()
-    {
-        if (Instance == null)
-        {
-            Instance = this;
-            DontDestroyOnLoad(gameObject);
-        }
-        else
-        {
-            Destroy(gameObject);
-        }
-    }
-    
-    public async void AuthenticateWithOAuth(string idToken)
+	private const string PublishableKey = "pk_test_505bc088-905e-5a43-b60b-4c37ed1f887a";
+	private const string ShieldKey = "a4b75269-65e7-49c4-a600-6b5d9d6eec66";
+	private const string ShieldEncKey = "/cC/ElEv1bCHxvbE/UUH+bLIf8nSLZOrxj8TkKChiY4=";
+
+	[HideInInspector] public string accessToken;
+	private OpenfortSDK Openfort;
+
+	void Awake()
 	{
-		Debug.Log("Google Sign-In Success! Token: " + idToken);
-        
-		Debug.Log("Openfort Auth");
-		mOpenfort = new OpenfortSDK(PublishableKey); 
-		oauthAccessToken = await mOpenfort.AuthenticateWithOAuth(OAuthProvider.Firebase, idToken, TokenType.IdToken);
-		Debug.Log("Access Token: " + oauthAccessToken);
-
-		try
+		if (Instance == null)
 		{
-			mOpenfort.ConfigureEmbeddedSigner(80001);
+			Instance = this;
+			DontDestroyOnLoad(gameObject);
 		}
-		catch (MissingRecoveryMethod)
+		else
 		{
-			await mOpenfort.ConfigureEmbeddedRecovery(new PasswordRecovery("secret"));
+			Destroy(gameObject);
 		}
 	}
-	
+
+	private async Task SetAutomaticRecoveryMethod(string idToken)
+	{
+		int chainId = 80001;
+		OpenfortAuthOptions shieldConfig = new OpenfortAuthOptions
+		{ authProvider = ShieldAuthProvider.Openfort, openfortOAuthProvider = OpenfortOAuthProvider.Firebase, openfortOAuthToken = idToken, openfortOAuthTokenType = OpenfortOAuthTokenType.IdToken };
+
+		await Openfort.ConfigureEmbeddedSigner(chainId, shieldConfig);
+	}
+
+	public async void AuthenticateWithOAuth(string idToken, string accessToken)
+	{
+		Debug.Log("Google Sign-In Success! Token: " + idToken);
+		accessToken = accessToken;
+		Debug.Log("Openfort Auth");
+		Openfort = new OpenfortSDK(PublishableKey);
+		await Openfort.AuthenticateWithThirdPartyProvider("firebase", idToken, TokenType.IdToken);
+		await SetAutomaticRecoveryMethod(idToken);
+	}
+
 	public async UniTask<string> Mint()
 	{
-		if (string.IsNullOrEmpty(oauthAccessToken))
+		if (string.IsNullOrEmpty(accessToken))
 		{
 			Debug.LogError($"mAccessToken is null or empty");
 			return null;
 		}
-		
-		var webRequest = UnityWebRequest.Post("https://localhost/mint", "");
-		webRequest.SetRequestHeader("Authorization", "Bearer " + oauthAccessToken);
+
+		var webRequest = UnityWebRequest.Post("http://localhost:3000/mint", "");
+		webRequest.SetRequestHeader("Authorization", "Bearer " + accessToken);
 		webRequest.SetRequestHeader("Content-Type", "application/json");
 		webRequest.SetRequestHeader("Accept", "application/json");
 		await SendWebRequestAsync(webRequest);
@@ -86,12 +88,12 @@ public class OpenfortController : MonoBehaviour
 		var nextAction = responseJson.Data.NextAction.Payload.UserOpHash;
 
 		Debug.Log("Next Action: " + nextAction);
-		var intentResponse = await mOpenfort.SendSignatureTransactionIntentRequest(id, nextAction);
+		var intentResponse = await Openfort.SendSignatureTransactionIntentRequest(id, nextAction);
 		var transactionHash = intentResponse.Response.TransactionHash;
 
 		return transactionHash;
 	}
-	
+
 	private Task SendWebRequestAsync(UnityWebRequest webRequest)
 	{
 		TaskCompletionSource<bool> tcs = new TaskCompletionSource<bool>();
@@ -109,7 +111,7 @@ public class OpenfortController : MonoBehaviour
 		};
 		return tcs.Task;
 	}
-	
+
 	public class RootObject
 	{
 		public TransactionIntentResponse Data { get; set; }

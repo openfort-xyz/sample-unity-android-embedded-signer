@@ -54,3 +54,4 @@ backend/node_modules/
 
 # editor
 backend/.idea/
+user.keystore
