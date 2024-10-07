@@ -1,9 +1,9 @@
 import { type NextFunction, type Request, type Response } from "express";
 const Openfort = require('@openfort/openfort-node').default;
 
-const policy_id = 'pol_0b74cbac-146b-4a1e-98e1-66e83aef5deb';
-const contract_id = 'con_42883506-04d5-408e-93da-2151e293a82b';
-const chainId = 80001;
+const policy_id = 'pol_e7491b89-528e-40bb-b3c2-9d40afa4fefc';
+const contract_id = 'con_26023265-1c7a-423e-87dd-0b3f8a2d20ef';
+const chainId = 80002;
 
 export class MintController {
 
@@ -18,20 +18,20 @@ export class MintController {
 
         if (!accessToken) {
             return res.status(401).send({
-              error: 'You must be signed in to view the protected content on this page.',
+                error: 'You must be signed in to view the protected content on this page.',
             });
-          }
+        }
 
         const response = await openfort.iam.verifyOAuthToken({
             provider: 'firebase',
             token: accessToken,
             tokenType: 'idToken',
-          });
-          
-        if (!response?.id) {
-        return res.status(401).send({
-            error: 'Invalid token or unable to verify user.',
         });
+
+        if (!response?.id) {
+            return res.status(401).send({
+                error: 'Invalid token or unable to verify user.',
+            });
         }
 
 

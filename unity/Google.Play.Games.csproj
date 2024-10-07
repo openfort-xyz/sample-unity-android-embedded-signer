@@ -331,143 +331,95 @@
     <Reference Include="UnityEditor.Android.Extensions">
         <HintPath>/Applications/Unity/Hub/Editor/2021.3.22f1/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll</HintPath>
     </Reference>
-    <Reference Include="Nethereum.Util">
-        <HintPath>/Users/jamalavedra/Projects/openfort/UNITY/noncustodial-unity-sample/unity/Library/PackageCache/com.openfort.sdk@5b0888934b/Assets/Nethereum.Util.dll</HintPath>
-    </Reference>
-    <Reference Include="BouncyCastle.Crypto">
-        <HintPath>/Users/jamalavedra/Projects/openfort/UNITY/noncustodial-unity-sample/unity/Library/PackageCache/com.openfort.sdk@5b0888934b/Assets/BouncyCastle.Crypto.dll</HintPath>
+    <Reference Include="VoltRpc">
+        <HintPath>/Users/jamalavedra/Projects/openfort/UNITY/firebase-noncustodial-unity-sample/unity/Library/PackageCache/com.openfort.sdk@eec2d2a682/Runtime/ThirdParty/org.nuget.voltrpc@3.1.0/netstandard2.1/VoltRpc.dll</HintPath>
     </Reference>
     <Reference Include="Google.VersionHandler">
-        <HintPath>/Users/jamalavedra/Projects/openfort/UNITY/noncustodial-unity-sample/unity/Assets/ExternalDependencyManager/Editor/Google.VersionHandler.dll</HintPath>
+        <HintPath>/Users/jamalavedra/Projects/openfort/UNITY/firebase-noncustodial-unity-sample/unity/Assets/ExternalDependencyManager/Editor/Google.VersionHandler.dll</HintPath>
     </Reference>
     <Reference Include="Google.JarResolver">
-        <HintPath>/Users/jamalavedra/Projects/openfort/UNITY/noncustodial-unity-sample/unity/Assets/ExternalDependencyManager/Editor/1.2.179/Google.JarResolver.dll</HintPath>
-    </Reference>
-    <Reference Include="Nethereum.BlockchainProcessing">
-        <HintPath>/Users/jamalavedra/Projects/openfort/UNITY/noncustodial-unity-sample/unity/Library/PackageCache/com.openfort.sdk@5b0888934b/Assets/Nethereum.BlockchainProcessing.dll</HintPath>
+        <HintPath>/Users/jamalavedra/Projects/openfort/UNITY/firebase-noncustodial-unity-sample/unity/Assets/ExternalDependencyManager/Editor/1.2.179/Google.JarResolver.dll</HintPath>
     </Reference>
     <Reference Include="Google.IOSResolver">
-        <HintPath>/Users/jamalavedra/Projects/openfort/UNITY/noncustodial-unity-sample/unity/Assets/ExternalDependencyManager/Editor/1.2.179/Google.IOSResolver.dll</HintPath>
-    </Reference>
-    <Reference Include="Nethereum.ABI">
-        <HintPath>/Users/jamalavedra/Projects/openfort/UNITY/noncustodial-unity-sample/unity/Library/PackageCache/com.openfort.sdk@5b0888934b/Assets/Nethereum.ABI.dll</HintPath>
-    </Reference>
-    <Reference Include="Nethereum.Accounts">
-        <HintPath>/Users/jamalavedra/Projects/openfort/UNITY/noncustodial-unity-sample/unity/Library/PackageCache/com.openfort.sdk@5b0888934b/Assets/Nethereum.Accounts.dll</HintPath>
+        <HintPath>/Users/jamalavedra/Projects/openfort/UNITY/firebase-noncustodial-unity-sample/unity/Assets/ExternalDependencyManager/Editor/1.2.179/Google.IOSResolver.dll</HintPath>
     </Reference>
     <Reference Include="Google.VersionHandlerImpl">
-        <HintPath>/Users/jamalavedra/Projects/openfort/UNITY/noncustodial-unity-sample/unity/Assets/ExternalDependencyManager/Editor/1.2.179/Google.VersionHandlerImpl.dll</HintPath>
+        <HintPath>/Users/jamalavedra/Projects/openfort/UNITY/firebase-noncustodial-unity-sample/unity/Assets/ExternalDependencyManager/Editor/1.2.179/Google.VersionHandlerImpl.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualScripting.IonicZip">
-        <HintPath>/Users/jamalavedra/Projects/openfort/UNITY/noncustodial-unity-sample/unity/Library/PackageCache/com.unity.visualscripting@1.8.0/Editor/VisualScripting.Core/Dependencies/DotNetZip/Unity.VisualScripting.IonicZip.dll</HintPath>
-    </Reference>
-    <Reference Include="Nethereum.Web3">
-        <HintPath>/Users/jamalavedra/Projects/openfort/UNITY/noncustodial-unity-sample/unity/Library/PackageCache/com.openfort.sdk@5b0888934b/Assets/Nethereum.Web3.dll</HintPath>
-    </Reference>
-    <Reference Include="Nethereum.RPC">
-        <HintPath>/Users/jamalavedra/Projects/openfort/UNITY/noncustodial-unity-sample/unity/Library/PackageCache/com.openfort.sdk@5b0888934b/Assets/Nethereum.RPC.dll</HintPath>
+        <HintPath>/Users/jamalavedra/Projects/openfort/UNITY/firebase-noncustodial-unity-sample/unity/Library/PackageCache/com.unity.visualscripting@1.8.0/Editor/VisualScripting.Core/Dependencies/DotNetZip/Unity.VisualScripting.IonicZip.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Burst.Cecil.Pdb">
-        <HintPath>/Users/jamalavedra/Projects/openfort/UNITY/noncustodial-unity-sample/unity/Library/PackageCache/com.unity.burst@1.6.6/Unity.Burst.CodeGen/Unity.Burst.Cecil.Pdb.dll</HintPath>
+        <HintPath>/Users/jamalavedra/Projects/openfort/UNITY/firebase-noncustodial-unity-sample/unity/Library/PackageCache/com.unity.burst@1.6.6/Unity.Burst.CodeGen/Unity.Burst.Cecil.Pdb.dll</HintPath>
     </Reference>
     <Reference Include="log4netPlastic">
-        <HintPath>/Users/jamalavedra/Projects/openfort/UNITY/noncustodial-unity-sample/unity/Library/PackageCache/com.unity.collab-proxy@2.0.1/Lib/Editor/PlasticSCM/log4netPlastic.dll</HintPath>
+        <HintPath>/Users/jamalavedra/Projects/openfort/UNITY/firebase-noncustodial-unity-sample/unity/Library/PackageCache/com.unity.collab-proxy@2.0.1/Lib/Editor/PlasticSCM/log4netPlastic.dll</HintPath>
+    </Reference>
+    <Reference Include="VoltstroStudios.UnityWebBrowser.Shared">
+        <HintPath>/Users/jamalavedra/Projects/openfort/UNITY/firebase-noncustodial-unity-sample/unity/Library/PackageCache/com.openfort.sdk@eec2d2a682/Runtime/ThirdParty/UnityWebBrowser/Plugins/VoltstroStudios.UnityWebBrowser.Shared.dll</HintPath>
     </Reference>
     <Reference Include="Google.PackageManagerResolver">
-        <HintPath>/Users/jamalavedra/Projects/openfort/UNITY/noncustodial-unity-sample/unity/Assets/ExternalDependencyManager/Editor/1.2.179/Google.PackageManagerResolver.dll</HintPath>
+        <HintPath>/Users/jamalavedra/Projects/openfort/UNITY/firebase-noncustodial-unity-sample/unity/Assets/ExternalDependencyManager/Editor/1.2.179/Google.PackageManagerResolver.dll</HintPath>
     </Reference>
     <Reference Include="DOTween">
-        <HintPath>/Users/jamalavedra/Projects/openfort/UNITY/noncustodial-unity-sample/unity/Assets/Demigiant/DOTween/DOTween.dll</HintPath>
+        <HintPath>/Users/jamalavedra/Projects/openfort/UNITY/firebase-noncustodial-unity-sample/unity/Assets/Demigiant/DOTween/DOTween.dll</HintPath>
     </Reference>
     <Reference Include="Firebase.App">
-        <HintPath>/Users/jamalavedra/Projects/openfort/UNITY/noncustodial-unity-sample/unity/Assets/Firebase/Plugins/Firebase.App.dll</HintPath>
+        <HintPath>/Users/jamalavedra/Projects/openfort/UNITY/firebase-noncustodial-unity-sample/unity/Assets/Firebase/Plugins/Firebase.App.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json">
-        <HintPath>/Users/jamalavedra/Projects/openfort/UNITY/noncustodial-unity-sample/unity/Library/PackageCache/com.unity.nuget.newtonsoft-json@3.1.0/Runtime/Newtonsoft.Json.dll</HintPath>
-    </Reference>
-    <Reference Include="Nethereum.Hex">
-        <HintPath>/Users/jamalavedra/Projects/openfort/UNITY/noncustodial-unity-sample/unity/Library/PackageCache/com.openfort.sdk@5b0888934b/Assets/Nethereum.Hex.dll</HintPath>
+        <HintPath>/Users/jamalavedra/Projects/openfort/UNITY/firebase-noncustodial-unity-sample/unity/Library/PackageCache/com.unity.nuget.newtonsoft-json@3.2.0/Runtime/Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="Firebase.Editor">
-        <HintPath>/Users/jamalavedra/Projects/openfort/UNITY/noncustodial-unity-sample/unity/Assets/Firebase/Editor/Firebase.Editor.dll</HintPath>
+        <HintPath>/Users/jamalavedra/Projects/openfort/UNITY/firebase-noncustodial-unity-sample/unity/Assets/Firebase/Editor/Firebase.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Plastic.Newtonsoft.Json">
-        <HintPath>/Users/jamalavedra/Projects/openfort/UNITY/noncustodial-unity-sample/unity/Library/PackageCache/com.unity.collab-proxy@2.0.1/Lib/Editor/PlasticSCM/Unity.Plastic.Newtonsoft.Json.dll</HintPath>
-    </Reference>
-    <Reference Include="Nethereum.Signer.EIP712">
-        <HintPath>/Users/jamalavedra/Projects/openfort/UNITY/noncustodial-unity-sample/unity/Library/PackageCache/com.openfort.sdk@5b0888934b/Assets/Nethereum.Signer.EIP712.dll</HintPath>
+        <HintPath>/Users/jamalavedra/Projects/openfort/UNITY/firebase-noncustodial-unity-sample/unity/Library/PackageCache/com.unity.collab-proxy@2.0.1/Lib/Editor/PlasticSCM/Unity.Plastic.Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="Firebase.Firestore">
-        <HintPath>/Users/jamalavedra/Projects/openfort/UNITY/noncustodial-unity-sample/unity/Assets/Firebase/Plugins/Firebase.Firestore.dll</HintPath>
+        <HintPath>/Users/jamalavedra/Projects/openfort/UNITY/firebase-noncustodial-unity-sample/unity/Assets/Firebase/Plugins/Firebase.Firestore.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Plastic.Antlr3.Runtime">
-        <HintPath>/Users/jamalavedra/Projects/openfort/UNITY/noncustodial-unity-sample/unity/Library/PackageCache/com.unity.collab-proxy@2.0.1/Lib/Editor/PlasticSCM/Unity.Plastic.Antlr3.Runtime.dll</HintPath>
+        <HintPath>/Users/jamalavedra/Projects/openfort/UNITY/firebase-noncustodial-unity-sample/unity/Library/PackageCache/com.unity.collab-proxy@2.0.1/Lib/Editor/PlasticSCM/Unity.Plastic.Antlr3.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualScripting.YamlDotNet">
-        <HintPath>/Users/jamalavedra/Projects/openfort/UNITY/noncustodial-unity-sample/unity/Library/PackageCache/com.unity.visualscripting@1.8.0/Editor/VisualScripting.Core/Dependencies/YamlDotNet/Unity.VisualScripting.YamlDotNet.dll</HintPath>
-    </Reference>
-    <Reference Include="Nethereum.RLP">
-        <HintPath>/Users/jamalavedra/Projects/openfort/UNITY/noncustodial-unity-sample/unity/Library/PackageCache/com.openfort.sdk@5b0888934b/Assets/Nethereum.RLP.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.Extensions.Logging.Abstractions">
-        <HintPath>/Users/jamalavedra/Projects/openfort/UNITY/noncustodial-unity-sample/unity/Library/PackageCache/com.openfort.sdk@5b0888934b/Assets/Microsoft.Extensions.Logging.Abstractions.dll</HintPath>
+        <HintPath>/Users/jamalavedra/Projects/openfort/UNITY/firebase-noncustodial-unity-sample/unity/Library/PackageCache/com.unity.visualscripting@1.8.0/Editor/VisualScripting.Core/Dependencies/YamlDotNet/Unity.VisualScripting.YamlDotNet.dll</HintPath>
     </Reference>
     <Reference Include="DOTweenEditor">
-        <HintPath>/Users/jamalavedra/Projects/openfort/UNITY/noncustodial-unity-sample/unity/Assets/Demigiant/DOTween/Editor/DOTweenEditor.dll</HintPath>
+        <HintPath>/Users/jamalavedra/Projects/openfort/UNITY/firebase-noncustodial-unity-sample/unity/Assets/Demigiant/DOTween/Editor/DOTweenEditor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Burst.Unsafe">
-        <HintPath>/Users/jamalavedra/Projects/openfort/UNITY/noncustodial-unity-sample/unity/Library/PackageCache/com.unity.burst@1.6.6/Unity.Burst.Unsafe.dll</HintPath>
+        <HintPath>/Users/jamalavedra/Projects/openfort/UNITY/firebase-noncustodial-unity-sample/unity/Library/PackageCache/com.unity.burst@1.6.6/Unity.Burst.Unsafe.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Burst.Cecil.Mdb">
-        <HintPath>/Users/jamalavedra/Projects/openfort/UNITY/noncustodial-unity-sample/unity/Library/PackageCache/com.unity.burst@1.6.6/Unity.Burst.CodeGen/Unity.Burst.Cecil.Mdb.dll</HintPath>
-    </Reference>
-    <Reference Include="Nethereum.KeyStore">
-        <HintPath>/Users/jamalavedra/Projects/openfort/UNITY/noncustodial-unity-sample/unity/Library/PackageCache/com.openfort.sdk@5b0888934b/Assets/Nethereum.KeyStore.dll</HintPath>
+        <HintPath>/Users/jamalavedra/Projects/openfort/UNITY/firebase-noncustodial-unity-sample/unity/Library/PackageCache/com.unity.burst@1.6.6/Unity.Burst.CodeGen/Unity.Burst.Cecil.Mdb.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualScripting.TextureAssets">
-        <HintPath>/Users/jamalavedra/Projects/openfort/UNITY/noncustodial-unity-sample/unity/Library/PackageCache/com.unity.visualscripting@1.8.0/Editor/VisualScripting.Core/EditorAssetResources/Unity.VisualScripting.TextureAssets.dll</HintPath>
-    </Reference>
-    <Reference Include="Firebase.TaskExtension">
-        <HintPath>/Users/jamalavedra/Projects/openfort/UNITY/noncustodial-unity-sample/unity/Assets/Firebase/Plugins/Firebase.TaskExtension.dll</HintPath>
+        <HintPath>/Users/jamalavedra/Projects/openfort/UNITY/firebase-noncustodial-unity-sample/unity/Library/PackageCache/com.unity.visualscripting@1.8.0/Editor/VisualScripting.Core/EditorAssetResources/Unity.VisualScripting.TextureAssets.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Burst.Cecil">
-        <HintPath>/Users/jamalavedra/Projects/openfort/UNITY/noncustodial-unity-sample/unity/Library/PackageCache/com.unity.burst@1.6.6/Unity.Burst.CodeGen/Unity.Burst.Cecil.dll</HintPath>
+        <HintPath>/Users/jamalavedra/Projects/openfort/UNITY/firebase-noncustodial-unity-sample/unity/Library/PackageCache/com.unity.burst@1.6.6/Unity.Burst.CodeGen/Unity.Burst.Cecil.dll</HintPath>
     </Reference>
-    <Reference Include="Nethereum.Signer">
-        <HintPath>/Users/jamalavedra/Projects/openfort/UNITY/noncustodial-unity-sample/unity/Library/PackageCache/com.openfort.sdk@5b0888934b/Assets/Nethereum.Signer.dll</HintPath>
+    <Reference Include="Firebase.TaskExtension">
+        <HintPath>/Users/jamalavedra/Projects/openfort/UNITY/firebase-noncustodial-unity-sample/unity/Assets/Firebase/Plugins/Firebase.TaskExtension.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Burst.Cecil.Rocks">
-        <HintPath>/Users/jamalavedra/Projects/openfort/UNITY/noncustodial-unity-sample/unity/Library/PackageCache/com.unity.burst@1.6.6/Unity.Burst.CodeGen/Unity.Burst.Cecil.Rocks.dll</HintPath>
-    </Reference>
-    <Reference Include="Nethereum.Model">
-        <HintPath>/Users/jamalavedra/Projects/openfort/UNITY/noncustodial-unity-sample/unity/Library/PackageCache/com.openfort.sdk@5b0888934b/Assets/Nethereum.Model.dll</HintPath>
+        <HintPath>/Users/jamalavedra/Projects/openfort/UNITY/firebase-noncustodial-unity-sample/unity/Library/PackageCache/com.unity.burst@1.6.6/Unity.Burst.CodeGen/Unity.Burst.Cecil.Rocks.dll</HintPath>
     </Reference>
     <Reference Include="Google.MiniJson">
-        <HintPath>/Users/jamalavedra/Projects/openfort/UNITY/noncustodial-unity-sample/unity/Assets/Firebase/Plugins/Google.MiniJson.dll</HintPath>
-    </Reference>
-    <Reference Include="Nethereum.JsonRpc.Client">
-        <HintPath>/Users/jamalavedra/Projects/openfort/UNITY/noncustodial-unity-sample/unity/Library/PackageCache/com.openfort.sdk@5b0888934b/Assets/Nethereum.JsonRpc.Client.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.VisualScripting.Antlr3.Runtime">
-        <HintPath>/Users/jamalavedra/Projects/openfort/UNITY/noncustodial-unity-sample/unity/Library/PackageCache/com.unity.visualscripting@1.8.0/Runtime/VisualScripting.Flow/Dependencies/NCalc/Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
-    </Reference>
-    <Reference Include="Nethereum.Contracts">
-        <HintPath>/Users/jamalavedra/Projects/openfort/UNITY/noncustodial-unity-sample/unity/Library/PackageCache/com.openfort.sdk@5b0888934b/Assets/Nethereum.Contracts.dll</HintPath>
+        <HintPath>/Users/jamalavedra/Projects/openfort/UNITY/firebase-noncustodial-unity-sample/unity/Assets/Firebase/Plugins/Google.MiniJson.dll</HintPath>
     </Reference>
     <Reference Include="Firebase.Platform">
-        <HintPath>/Users/jamalavedra/Projects/openfort/UNITY/noncustodial-unity-sample/unity/Assets/Firebase/Plugins/Firebase.Platform.dll</HintPath>
+        <HintPath>/Users/jamalavedra/Projects/openfort/UNITY/firebase-noncustodial-unity-sample/unity/Assets/Firebase/Plugins/Firebase.Platform.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.VisualScripting.Antlr3.Runtime">
+        <HintPath>/Users/jamalavedra/Projects/openfort/UNITY/firebase-noncustodial-unity-sample/unity/Library/PackageCache/com.unity.visualscripting@1.8.0/Runtime/VisualScripting.Flow/Dependencies/NCalc/Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="unityplastic">
-        <HintPath>/Users/jamalavedra/Projects/openfort/UNITY/noncustodial-unity-sample/unity/Library/PackageCache/com.unity.collab-proxy@2.0.1/Lib/Editor/PlasticSCM/unityplastic.dll</HintPath>
-    </Reference>
-    <Reference Include="Nethereum.JsonRpc.RpcClient">
-        <HintPath>/Users/jamalavedra/Projects/openfort/UNITY/noncustodial-unity-sample/unity/Library/PackageCache/com.openfort.sdk@5b0888934b/Assets/Nethereum.JsonRpc.RpcClient.dll</HintPath>
+        <HintPath>/Users/jamalavedra/Projects/openfort/UNITY/firebase-noncustodial-unity-sample/unity/Library/PackageCache/com.unity.collab-proxy@2.0.1/Lib/Editor/PlasticSCM/unityplastic.dll</HintPath>
     </Reference>
     <Reference Include="Firebase.Auth">
-        <HintPath>/Users/jamalavedra/Projects/openfort/UNITY/noncustodial-unity-sample/unity/Assets/Firebase/Plugins/Firebase.Auth.dll</HintPath>
-    </Reference>
-    <Reference Include="Nethereum.Merkle.Patricia">
-        <HintPath>/Users/jamalavedra/Projects/openfort/UNITY/noncustodial-unity-sample/unity/Library/PackageCache/com.openfort.sdk@5b0888934b/Assets/Nethereum.Merkle.Patricia.dll</HintPath>
+        <HintPath>/Users/jamalavedra/Projects/openfort/UNITY/firebase-noncustodial-unity-sample/unity/Assets/Firebase/Plugins/Firebase.Auth.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Android.Types">
         <HintPath>/Applications/Unity/Hub/Editor/2021.3.22f1/PlaybackEngines/AndroidPlayer/Unity.Android.Types.dll</HintPath>
@@ -842,10 +794,10 @@
         <HintPath>/Applications/Unity/Hub/Editor/2021.3.22f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netfx/mscorlib.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.UI">
-        <HintPath>/Users/jamalavedra/Projects/openfort/UNITY/noncustodial-unity-sample/unity/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+        <HintPath>/Users/jamalavedra/Projects/openfort/UNITY/firebase-noncustodial-unity-sample/unity/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
-        <HintPath>/Users/jamalavedra/Projects/openfort/UNITY/noncustodial-unity-sample/unity/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+        <HintPath>/Users/jamalavedra/Projects/openfort/UNITY/firebase-noncustodial-unity-sample/unity/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

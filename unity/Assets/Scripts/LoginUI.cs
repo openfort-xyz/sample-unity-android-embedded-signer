@@ -16,9 +16,6 @@ using Firebase.Auth;
 using Firebase.Firestore;
 using Newtonsoft.Json;
 using Openfort;
-using Openfort.Model;
-using Openfort.Recovery;
-using OAuthProvider = Openfort.Model.OAuthProvider;
 #if (UNITY_IOS || UNITY_TVOS)
 using UnityEngine.SocialPlatforms.GameCenter;
 #elif UNITY_ANDROID

@@ -14,7 +14,6 @@ using System.Threading.Tasks;
 using Cysharp.Threading.Tasks;
 using Firebase.Auth;
 using Newtonsoft.Json;
-using Openfort.Model;
 
 
 public class CharacterShopUI : MonoBehaviour
