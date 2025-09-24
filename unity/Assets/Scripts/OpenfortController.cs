@@ -14,7 +14,6 @@ public class OpenfortController : MonoBehaviour
 
 	private const string PublishableKey = "pk_test_505bc088-905e-5a43-b60b-4c37ed1f887a";
 	private const string ShieldKey = "a4b75269-65e7-49c4-a600-6b5d9d6eec66";
-	private const string ShieldEncKey = "/cC/ElEv1bCHxvbE/UUH+bLIf8nSLZOrxj8TkKChiY4=";
 
 	[HideInInspector] public string accessToken;
 	private OpenfortSDK Openfort;
@@ -35,24 +34,46 @@ public class OpenfortController : MonoBehaviour
 	private async Task SetAutomaticRecoveryMethod(string idToken)
 	{
 		int chainId = 80002;
-		ShieldAuthentication shieldConfig = new ShieldAuthentication(ShieldAuthType.Openfort, idToken, "firebase", "idToken" );
-        EmbeddedSignerRequest request = new EmbeddedSignerRequest(chainId, shieldConfig);
-		await Openfort.ConfigureEmbeddedSigner(request);
+
+		// Get encryption session from API
+		var webRequest = UnityWebRequest.Post("https://create-next-app.openfort.io/api/protected-create-encryption-session", "");
+		string accessToken = await Openfort.GetAccessToken();
+		webRequest.SetRequestHeader("Authorization", "Bearer " + accessToken);
+		webRequest.SetRequestHeader("Content-Type", "application/json");
+		webRequest.SetRequestHeader("Accept", "application/json");
+		await SendWebRequestAsync(webRequest);
+
+		if (webRequest.result != UnityWebRequest.Result.Success)
+		{
+			Debug.LogError("Failed to get encryption session: " + webRequest.error);
+			throw new Exception("Failed to get encryption session");
+		}
+
+		var responseText = webRequest.downloadHandler.text;
+		var responseJson = JsonConvert.DeserializeObject<Dictionary<string, string>>(responseText);
+		var encryptionSession = responseJson["session"];
+		Debug.Log("Encryption session: " + encryptionSession);
+
+		var recoveryParams = new AutomaticRecoveryParams(encryptionSession);
+
+		ConfigureEmbeddedWalletRequest request = new ConfigureEmbeddedWalletRequest(
+			recoveryParams: recoveryParams,
+			chainId: chainId
+		);
+		await Openfort.ConfigureEmbeddedWallet(request);
 	}
 
-	public async void AuthenticateWithOAuth(string idToken, string accessToken)
+	public async void Init(Func<string, Task<string>> getThirdPartyToken)
 	{
-		Debug.Log("Google Sign-In Success! Token: " + idToken);
-		accessToken = accessToken;
-		Debug.Log("Openfort Auth");
-        if (OpenfortSDK.Instance != null)
-        {
-            Openfort = OpenfortSDK.Instance;
-        }
-		Openfort = await OpenfortSDK.Init(PublishableKey, ShieldKey, ShieldEncKey);
-		ThirdPartyOAuthRequest request = new ThirdPartyOAuthRequest(ThirdPartyOAuthProvider.Firebase, idToken, TokenType.IdToken);
-		await Openfort.AuthenticateWithThirdPartyProvider(request);
-		await SetAutomaticRecoveryMethod(idToken);
+		if (OpenfortSDK.Instance != null)
+		{
+			Openfort = OpenfortSDK.Instance;
+		}
+		Openfort = await OpenfortSDK.Init(
+			PublishableKey,
+			ShieldKey,
+			getThirdPartyToken: getThirdPartyToken
+		);
 	}
 
 	public async UniTask<string> Mint()
@@ -63,7 +84,7 @@ public class OpenfortController : MonoBehaviour
 			return null;
 		}
 
-		var webRequest = UnityWebRequest.Post("https://openfort-auth-non-custodial.vercel.app/api/protected-collect", "");
+		var webRequest = UnityWebRequest.Post("https://create-next-app.openfort.io/api/protected-collect", "");
 		webRequest.SetRequestHeader("Authorization", "Bearer " + accessToken);
 		webRequest.SetRequestHeader("Content-Type", "application/json");
 		webRequest.SetRequestHeader("Accept", "application/json");
@@ -81,7 +102,7 @@ public class OpenfortController : MonoBehaviour
 		Debug.Log("Mint Response: " + responseText);
 		var responseJson = JsonConvert.DeserializeObject<RootObject>(responseText);
 
-        SignatureTransactionIntentRequest request = new SignatureTransactionIntentRequest(responseJson.transactionIntentId, responseJson.userOperationHash);
+		SignatureTransactionIntentRequest request = new SignatureTransactionIntentRequest(responseJson.transactionIntentId, responseJson.userOperationHash);
 		TransactionIntentResponse intentResponse = await Openfort.SendSignatureTransactionIntentRequest(request);
 		return intentResponse.Response.TransactionHash;
 	}
@@ -104,9 +125,9 @@ public class OpenfortController : MonoBehaviour
 		return tcs.Task;
 	}
 
-    public class RootObject
-    {
-        public string transactionIntentId { get; set; }
-        public string userOperationHash { get; set; }
-    }
+	public class RootObject
+	{
+		public string transactionIntentId { get; set; }
+		public string userOperationHash { get; set; }
+	}
 }

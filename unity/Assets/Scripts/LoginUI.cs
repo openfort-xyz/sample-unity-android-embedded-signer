@@ -384,6 +384,35 @@ public class LoginUI : MonoBehaviour
 		await auth.SignInAnonymouslyAsync().ContinueWithOnMainThread(HandleSignInWithAuthResult);
 	}
 
+	private async Task<string> LoginFirebase(string serverAuthCode)
+	{
+		var auth = Firebase.Auth.FirebaseAuth.DefaultInstance;
+
+		var credential = Firebase.Auth.PlayGamesAuthProvider.GetCredential(serverAuthCode);
+
+		await auth.SignInWithCredentialAsync(credential).ContinueWith(task =>
+		{
+			if (task.IsCanceled)
+			{
+				Debug.LogError("SignInWithCredentialAsync was canceled.");
+				return;
+			}
+			if (task.IsFaulted)
+			{
+				Debug.LogError("SignInWithCredentialAsync encountered an error: " + task.Exception);
+				return;
+			}
+
+			var user = task.Result;
+			Debug.LogFormat("User signed in successfully: {0} ({1})", user.DisplayName, user.UserId);
+
+			var identityToken = user.TokenAsync(false).Result;
+			Debug.Log("Identity Token: " + identityToken);
+
+			return identityToken;
+		});
+	}
+
 	public void AuthenticateToGooglePlayGames()
 	{
 #if UNITY_ANDROID
@@ -406,26 +435,13 @@ public class LoginUI : MonoBehaviour
 				var credential = Firebase.Auth.PlayGamesAuthProvider.GetCredential(serverAuthCode);
                 
 				auth.SignInWithCredentialAsync(credential).ContinueWith(task =>
-				{
-					if (task.IsCanceled)
-					{
-						Debug.LogError("SignInWithCredentialAsync was canceled.");
-						return;
-					}
-					if (task.IsFaulted)
-					{
-						Debug.LogError("SignInWithCredentialAsync encountered an error: " + task.Exception);
-						return;
-					}
-
-					var user = task.Result;
-					Debug.LogFormat("User signed in successfully: {0} ({1})", user.DisplayName, user.UserId);
-
-					identityToken = user.TokenAsync(false).Result;
-					accessToken = user.TokenAsync(true).Result;
-					Debug.Log("Identity Token: " + identityToken);
-					
-					OpenfortController.Instance.AuthenticateWithOAuth(identityToken, accessToken);
+				{	
+					OpenfortController.Instance.Init(
+						async requestId => 
+						{
+							await LoginWithFirebase(serverAuthCode);
+						}
+					);
 				});
 			});
 		});
