@@ -23,7 +23,9 @@ public class Player : MonoBehaviour {
       {
          // Initialize Firebase
          FirebaseManager.Instance.OnFirebaseInitialized += FirebaseManager_OnInitialized_Handler;
+#pragma warning disable CS4014
          FirebaseManager.Instance.InitializeFirebase();
+#pragma warning restore CS4014
          return;
       }
 

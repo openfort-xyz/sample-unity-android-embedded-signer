@@ -7,8 +7,6 @@ using System.Collections.Generic;
 using System;
 using UnityEngine.Networking;
 using Firebase.Extensions;
-using System;
-using System.Collections.Generic;
 using System.Threading.Tasks;
 using Cysharp.Threading.Tasks;
 using Firebase;
@@ -27,7 +25,6 @@ public class LoginUI : MonoBehaviour
 {
 	[Header("Layout Settings")]
 
-	[SerializeField] float itemSpacing = .5f;
 	float itemHeight;
 
 	[Space(20)]
@@ -47,9 +44,6 @@ public class LoginUI : MonoBehaviour
 	[Header("Error messages")]
 	[SerializeField] TMP_Text ErrorText;
 
-	int newSelectedItemIndex = 0;
-	int previousSelectedItemIndex = 0;
-	Firebase.DependencyStatus dependencyStatus = Firebase.DependencyStatus.UnavailableOther;
 
 	protected Dictionary<string, Firebase.Auth.FirebaseUser> userByAuth =
 	  new Dictionary<string, Firebase.Auth.FirebaseUser>();
@@ -81,7 +75,9 @@ public class LoginUI : MonoBehaviour
 		if (!FirebaseManager.Instance.initialized)
 		{
 			FirebaseManager.Instance.OnFirebaseInitialized += FirebaseManager_OnInitialized_Handler;
+#pragma warning disable CS4014
 			FirebaseManager.Instance.InitializeFirebase();
+#pragma warning restore CS4014
 		}
 		else
 		{
@@ -384,33 +380,26 @@ public class LoginUI : MonoBehaviour
 		await auth.SignInAnonymouslyAsync().ContinueWithOnMainThread(HandleSignInWithAuthResult);
 	}
 
-	private async Task<string> LoginFirebase(string serverAuthCode)
+	private async Task<string> LoginWithFirebase(string serverAuthCode)
 	{
 		var auth = Firebase.Auth.FirebaseAuth.DefaultInstance;
-
 		var credential = Firebase.Auth.PlayGamesAuthProvider.GetCredential(serverAuthCode);
 
-		await auth.SignInWithCredentialAsync(credential).ContinueWith(task =>
+		try
 		{
-			if (task.IsCanceled)
-			{
-				Debug.LogError("SignInWithCredentialAsync was canceled.");
-				return;
-			}
-			if (task.IsFaulted)
-			{
-				Debug.LogError("SignInWithCredentialAsync encountered an error: " + task.Exception);
-				return;
-			}
-
-			var user = task.Result;
+			var user = await auth.SignInWithCredentialAsync(credential);
 			Debug.LogFormat("User signed in successfully: {0} ({1})", user.DisplayName, user.UserId);
 
-			var identityToken = user.TokenAsync(false).Result;
+			var identityToken = await user.TokenAsync(false);
 			Debug.Log("Identity Token: " + identityToken);
 
 			return identityToken;
-		});
+		}
+		catch (Exception ex)
+		{
+			Debug.LogError("SignInWithCredentialAsync failed: " + ex);
+			return string.Empty;
+		}
 	}
 
 	public void AuthenticateToGooglePlayGames()
@@ -437,10 +426,7 @@ public class LoginUI : MonoBehaviour
 				auth.SignInWithCredentialAsync(credential).ContinueWith(task =>
 				{	
 					OpenfortController.Instance.Init(
-						async requestId => 
-						{
-							await LoginWithFirebase(serverAuthCode);
-						}
+						async requestId => await LoginWithFirebase(serverAuthCode)
 					);
 				});
 			});

@@ -36,7 +36,7 @@ public class OpenfortController : MonoBehaviour
 		int chainId = 80002;
 
 		// Get encryption session from API
-		var webRequest = UnityWebRequest.Post("https://create-next-app.openfort.io/api/protected-create-encryption-session", "");
+		var webRequest = UnityWebRequest.PostWwwForm("https://create-next-app.openfort.io/api/protected-create-encryption-session", "");
 		string accessToken = await Openfort.GetAccessToken();
 		webRequest.SetRequestHeader("Authorization", "Bearer " + accessToken);
 		webRequest.SetRequestHeader("Content-Type", "application/json");
@@ -84,7 +84,7 @@ public class OpenfortController : MonoBehaviour
 			return null;
 		}
 
-		var webRequest = UnityWebRequest.Post("https://create-next-app.openfort.io/api/protected-collect", "");
+		var webRequest = UnityWebRequest.PostWwwForm("https://create-next-app.openfort.io/api/protected-collect", "");
 		webRequest.SetRequestHeader("Authorization", "Bearer " + accessToken);
 		webRequest.SetRequestHeader("Content-Type", "application/json");
 		webRequest.SetRequestHeader("Accept", "application/json");
