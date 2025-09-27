@@ -9,6 +9,7 @@ namespace Firebase.Sample.Auth
     using System.Collections.Generic;
     using System.Threading.Tasks;
     using UnityEngine;
+    using Openfort;
 
     // Handler for UI buttons on the scene.  Also performs some
     // necessary setup (initializing the firebase app, etc) on
@@ -336,6 +337,7 @@ namespace Firebase.Sample.Auth
                   {
                       var user = task.Result.User;
                       DisplayDetailedUserInfo(user, 1);
+                      
                       return UpdateUserProfileAsync(newDisplayName: newDisplayName);
                   }
                   return task;
@@ -453,6 +455,29 @@ namespace Firebase.Sample.Auth
             if (LogTaskCompletion(task, "Sign-in"))
             {
                 DebugLog(String.Format("{0} signed in", task.Result.DisplayName));
+            }
+        }
+
+        private async Task<string> LoginWithFirebaseGeneric()
+        {
+            try
+            {
+                if (auth.CurrentUser != null)
+                {
+                    var identityToken = await auth.CurrentUser.TokenAsync(false);
+                    DebugLog("Identity Token: " + identityToken);
+                    return identityToken;
+                }
+                else
+                {
+                    DebugLog("No current user to get token from");
+                    return string.Empty;
+                }
+            }
+            catch (Exception ex)
+            {
+                DebugLog("Failed to get Firebase token: " + ex);
+                return string.Empty;
             }
         }
 

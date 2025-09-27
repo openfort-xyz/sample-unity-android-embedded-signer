@@ -150,7 +150,7 @@ public class LoginUI : MonoBehaviour
 	}
 
 	// Track state changes of the auth object.
-	void AuthStateChanged(object sender, System.EventArgs eventArgs)
+	async void AuthStateChanged(object sender, System.EventArgs eventArgs)
 	{
 		Debug.Log("!! AUTH STATE CHANGED !!");
 		Firebase.Auth.FirebaseAuth senderAuth = sender as Firebase.Auth.FirebaseAuth;
@@ -171,6 +171,9 @@ public class LoginUI : MonoBehaviour
 				displayName = user.DisplayName ?? "";
 				DisplayDetailedUserInfo(user, 1);
 				loggedInUI.SetActive(true);
+				
+				// Initialize Openfort and set automatic recovery method
+				await InitializeOpenfortAndSetRecovery();
 			}
 			else
 			{
@@ -402,6 +405,47 @@ public class LoginUI : MonoBehaviour
 		}
 	}
 
+	private async Task InitializeOpenfortAndSetRecovery()
+	{
+		try
+		{
+			// First initialize Openfort and wait for completion
+			await OpenfortController.Instance.Init(
+				async requestId => await LoginWithFirebaseGeneric()
+			);
+			
+			// Now set automatic recovery method
+			await OpenfortController.Instance.SetAutomaticRecoveryMethod();
+		}
+		catch (Exception ex)
+		{
+			Debug.LogError("Failed to initialize Openfort and set recovery: " + ex);
+		}
+	}
+
+	private async Task<string> LoginWithFirebaseGeneric()
+	{
+		try
+		{
+			if (auth.CurrentUser != null)
+			{
+				var identityToken = await auth.CurrentUser.TokenAsync(false);
+				Debug.Log("Identity Token: " + identityToken);
+				return identityToken;
+			}
+			else
+			{
+				Debug.LogError("No current user to get token from");
+				return string.Empty;
+			}
+		}
+		catch (Exception ex)
+		{
+			Debug.LogError("Failed to get Firebase token: " + ex);
+			return string.Empty;
+		}
+	}
+
 	public void AuthenticateToGooglePlayGames()
 	{
 #if UNITY_ANDROID
@@ -423,12 +467,7 @@ public class LoginUI : MonoBehaviour
                 
 				var credential = Firebase.Auth.PlayGamesAuthProvider.GetCredential(serverAuthCode);
                 
-				auth.SignInWithCredentialAsync(credential).ContinueWith(task =>
-				{	
-					OpenfortController.Instance.Init(
-						async requestId => await LoginWithFirebase(serverAuthCode)
-					);
-				});
+				auth.SignInWithCredentialAsync(credential);
 			});
 		});
 #else

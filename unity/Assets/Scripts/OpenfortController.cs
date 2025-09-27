@@ -31,39 +31,85 @@ public class OpenfortController : MonoBehaviour
 		}
 	}
 
-	private async Task SetAutomaticRecoveryMethod(string idToken)
+	public async Task SetAutomaticRecoveryMethod()
 	{
-		int chainId = 80002;
-
-		// Get encryption session from API
-		var webRequest = UnityWebRequest.PostWwwForm("https://create-next-app.openfort.io/api/protected-create-encryption-session", "");
-		string accessToken = await Openfort.GetAccessToken();
-		webRequest.SetRequestHeader("Authorization", "Bearer " + accessToken);
-		webRequest.SetRequestHeader("Content-Type", "application/json");
-		webRequest.SetRequestHeader("Accept", "application/json");
-		await SendWebRequestAsync(webRequest);
-
-		if (webRequest.result != UnityWebRequest.Result.Success)
+		Debug.Log("=== Starting SetAutomaticRecoveryMethod ===");
+		
+		try
 		{
-			Debug.LogError("Failed to get encryption session: " + webRequest.error);
-			throw new Exception("Failed to get encryption session");
+			int chainId = 80002;
+			string accessToken;
+			
+			// Check if Openfort is initialized
+			if (Openfort == null)
+			{
+				Debug.LogError("Openfort SDK is null - not initialized");
+				throw new Exception("Openfort SDK not initialized");
+			}
+			
+			Debug.Log("Getting access token from Openfort SDK...");
+			try
+			{
+				accessToken = await Openfort.GetAccessToken();
+				Debug.Log("Access token obtained: " + (string.IsNullOrEmpty(accessToken) ? "EMPTY" : "SUCCESS"));
+				
+				if (string.IsNullOrEmpty(accessToken))
+				{
+					Debug.LogError("Access token is null or empty");
+					throw new Exception("Access token is null or empty");
+				}
+			}
+			catch (Exception e)
+			{
+				Debug.LogError("Failed to get access token: " + e.Message);
+				throw;
+			}
+
+			// Get encryption session from API
+			Debug.Log("Creating web request to: https://firebase-auth-embedded-wallet.vercel.app/api/protected-create-encryption-session");
+			var webRequest = UnityWebRequest.PostWwwForm("https://firebase-auth-embedded-wallet.vercel.app/api/protected-create-encryption-session", "");
+			webRequest.SetRequestHeader("Authorization", "Bearer " + accessToken);
+			webRequest.SetRequestHeader("Content-Type", "application/json");
+			webRequest.SetRequestHeader("Accept", "application/json");
+			
+			Debug.Log("Sending web request...");
+			await SendWebRequestAsync(webRequest);
+
+			Debug.Log($"Web request completed. Result: {webRequest.result}, Response Code: {webRequest.responseCode}");
+			
+			if (webRequest.result != UnityWebRequest.Result.Success)
+			{
+				Debug.LogError($"Web request failed - Result: {webRequest.result}, Error: {webRequest.error}, Response Code: {webRequest.responseCode}");
+				throw new Exception($"Cannot resolve destination host: {webRequest.error}");
+			}
+
+			var responseText = webRequest.downloadHandler.text;
+			Debug.Log("Response received: " + responseText);
+			
+			var responseJson = JsonConvert.DeserializeObject<Dictionary<string, string>>(responseText);
+			var encryptionSession = responseJson["session"];
+			Debug.Log("Encryption session: " + encryptionSession);
+
+			var recoveryParams = new AutomaticRecoveryParams(encryptionSession);
+
+			ConfigureEmbeddedWalletRequest request = new ConfigureEmbeddedWalletRequest(
+				recoveryParams: recoveryParams,
+				chainId: chainId
+			);
+			
+			Debug.Log("Configuring embedded wallet...");
+			await Openfort.ConfigureEmbeddedWallet(request);
+			Debug.Log("=== SetAutomaticRecoveryMethod completed successfully ===");
 		}
-
-		var responseText = webRequest.downloadHandler.text;
-		var responseJson = JsonConvert.DeserializeObject<Dictionary<string, string>>(responseText);
-		var encryptionSession = responseJson["session"];
-		Debug.Log("Encryption session: " + encryptionSession);
-
-		var recoveryParams = new AutomaticRecoveryParams(encryptionSession);
-
-		ConfigureEmbeddedWalletRequest request = new ConfigureEmbeddedWalletRequest(
-			recoveryParams: recoveryParams,
-			chainId: chainId
-		);
-		await Openfort.ConfigureEmbeddedWallet(request);
+		catch (Exception ex)
+		{
+			Debug.LogError($"=== SetAutomaticRecoveryMethod FAILED: {ex.Message} ===");
+			Debug.LogError($"Stack trace: {ex.StackTrace}");
+			throw;
+		}
 	}
 
-	public async void Init(Func<string, Task<string>> getThirdPartyToken)
+	public async Task Init(Func<string, Task<string>> getThirdPartyToken)
 	{
 		if (OpenfortSDK.Instance != null)
 		{
@@ -72,7 +118,8 @@ public class OpenfortController : MonoBehaviour
 		Openfort = await OpenfortSDK.Init(
 			PublishableKey,
 			ShieldKey,
-			getThirdPartyToken: getThirdPartyToken
+			getThirdPartyToken: getThirdPartyToken,
+			iframeUrl: "https://development-iframe.vercel.app"
 		);
 	}
 
@@ -84,7 +131,7 @@ public class OpenfortController : MonoBehaviour
 			return null;
 		}
 
-		var webRequest = UnityWebRequest.PostWwwForm("https://create-next-app.openfort.io/api/protected-collect", "");
+		var webRequest = UnityWebRequest.PostWwwForm("https://firebase-auth-embedded-wallet.vercel.app/api/protected-collect", "");
 		webRequest.SetRequestHeader("Authorization", "Bearer " + accessToken);
 		webRequest.SetRequestHeader("Content-Type", "application/json");
 		webRequest.SetRequestHeader("Accept", "application/json");
