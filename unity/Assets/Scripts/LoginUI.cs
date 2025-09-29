@@ -7,8 +7,6 @@ using System.Collections.Generic;
 using System;
 using UnityEngine.Networking;
 using Firebase.Extensions;
-using System;
-using System.Collections.Generic;
 using System.Threading.Tasks;
 using Cysharp.Threading.Tasks;
 using Firebase;
@@ -27,7 +25,6 @@ public class LoginUI : MonoBehaviour
 {
 	[Header("Layout Settings")]
 
-	[SerializeField] float itemSpacing = .5f;
 	float itemHeight;
 
 	[Space(20)]
@@ -47,9 +44,6 @@ public class LoginUI : MonoBehaviour
 	[Header("Error messages")]
 	[SerializeField] TMP_Text ErrorText;
 
-	int newSelectedItemIndex = 0;
-	int previousSelectedItemIndex = 0;
-	Firebase.DependencyStatus dependencyStatus = Firebase.DependencyStatus.UnavailableOther;
 
 	protected Dictionary<string, Firebase.Auth.FirebaseUser> userByAuth =
 	  new Dictionary<string, Firebase.Auth.FirebaseUser>();
@@ -81,7 +75,9 @@ public class LoginUI : MonoBehaviour
 		if (!FirebaseManager.Instance.initialized)
 		{
 			FirebaseManager.Instance.OnFirebaseInitialized += FirebaseManager_OnInitialized_Handler;
+#pragma warning disable CS4014
 			FirebaseManager.Instance.InitializeFirebase();
+#pragma warning restore CS4014
 		}
 		else
 		{
@@ -154,7 +150,7 @@ public class LoginUI : MonoBehaviour
 	}
 
 	// Track state changes of the auth object.
-	void AuthStateChanged(object sender, System.EventArgs eventArgs)
+	async void AuthStateChanged(object sender, System.EventArgs eventArgs)
 	{
 		Debug.Log("!! AUTH STATE CHANGED !!");
 		Firebase.Auth.FirebaseAuth senderAuth = sender as Firebase.Auth.FirebaseAuth;
@@ -175,6 +171,9 @@ public class LoginUI : MonoBehaviour
 				displayName = user.DisplayName ?? "";
 				DisplayDetailedUserInfo(user, 1);
 				loggedInUI.SetActive(true);
+				
+				// Initialize Openfort and set automatic recovery method
+				await InitializeOpenfortAndSetRecovery();
 			}
 			else
 			{
@@ -384,6 +383,69 @@ public class LoginUI : MonoBehaviour
 		await auth.SignInAnonymouslyAsync().ContinueWithOnMainThread(HandleSignInWithAuthResult);
 	}
 
+	private async Task<string> LoginWithFirebase(string serverAuthCode)
+	{
+		var auth = Firebase.Auth.FirebaseAuth.DefaultInstance;
+		var credential = Firebase.Auth.PlayGamesAuthProvider.GetCredential(serverAuthCode);
+
+		try
+		{
+			var user = await auth.SignInWithCredentialAsync(credential);
+			Debug.LogFormat("User signed in successfully: {0} ({1})", user.DisplayName, user.UserId);
+
+			var identityToken = await user.TokenAsync(false);
+			Debug.Log("Identity Token: " + identityToken);
+
+			return identityToken;
+		}
+		catch (Exception ex)
+		{
+			Debug.LogError("SignInWithCredentialAsync failed: " + ex);
+			return string.Empty;
+		}
+	}
+
+	private async Task InitializeOpenfortAndSetRecovery()
+	{
+		try
+		{
+			// First initialize Openfort and wait for completion
+			await OpenfortController.Instance.Init(
+				async requestId => await LoginWithFirebaseGeneric()
+			);
+			
+			// Now set automatic recovery method
+			await OpenfortController.Instance.SetAutomaticRecoveryMethod();
+		}
+		catch (Exception ex)
+		{
+			Debug.LogError("Failed to initialize Openfort and set recovery: " + ex);
+		}
+	}
+
+	private async Task<string> LoginWithFirebaseGeneric()
+	{
+		try
+		{
+			if (auth.CurrentUser != null)
+			{
+				var identityToken = await auth.CurrentUser.TokenAsync(false);
+				Debug.Log("Identity Token: " + identityToken);
+				return identityToken;
+			}
+			else
+			{
+				Debug.LogError("No current user to get token from");
+				return string.Empty;
+			}
+		}
+		catch (Exception ex)
+		{
+			Debug.LogError("Failed to get Firebase token: " + ex);
+			return string.Empty;
+		}
+	}
+
 	public void AuthenticateToGooglePlayGames()
 	{
 #if UNITY_ANDROID
@@ -405,28 +467,7 @@ public class LoginUI : MonoBehaviour
                 
 				var credential = Firebase.Auth.PlayGamesAuthProvider.GetCredential(serverAuthCode);
                 
-				auth.SignInWithCredentialAsync(credential).ContinueWith(task =>
-				{
-					if (task.IsCanceled)
-					{
-						Debug.LogError("SignInWithCredentialAsync was canceled.");
-						return;
-					}
-					if (task.IsFaulted)
-					{
-						Debug.LogError("SignInWithCredentialAsync encountered an error: " + task.Exception);
-						return;
-					}
-
-					var user = task.Result;
-					Debug.LogFormat("User signed in successfully: {0} ({1})", user.DisplayName, user.UserId);
-
-					identityToken = user.TokenAsync(false).Result;
-					accessToken = user.TokenAsync(true).Result;
-					Debug.Log("Identity Token: " + identityToken);
-					
-					OpenfortController.Instance.AuthenticateWithOAuth(identityToken, accessToken);
-				});
+				auth.SignInWithCredentialAsync(credential);
 			});
 		});
 #else

@@ -14,7 +14,6 @@ public class OpenfortController : MonoBehaviour
 
 	private const string PublishableKey = "pk_test_505bc088-905e-5a43-b60b-4c37ed1f887a";
 	private const string ShieldKey = "a4b75269-65e7-49c4-a600-6b5d9d6eec66";
-	private const string ShieldEncKey = "/cC/ElEv1bCHxvbE/UUH+bLIf8nSLZOrxj8TkKChiY4=";
 
 	[HideInInspector] public string accessToken;
 	private OpenfortSDK Openfort;
@@ -32,27 +31,96 @@ public class OpenfortController : MonoBehaviour
 		}
 	}
 
-	private async Task SetAutomaticRecoveryMethod(string idToken)
+	public async Task SetAutomaticRecoveryMethod()
 	{
-		int chainId = 80002;
-		ShieldAuthentication shieldConfig = new ShieldAuthentication(ShieldAuthType.Openfort, idToken, "firebase", "idToken" );
-        EmbeddedSignerRequest request = new EmbeddedSignerRequest(chainId, shieldConfig);
-		await Openfort.ConfigureEmbeddedSigner(request);
+
+		try
+		{
+			int chainId = 80002;
+			string accessToken;
+
+			// Check if Openfort is initialized
+			if (Openfort == null)
+			{
+				Debug.LogError("Openfort SDK is null - not initialized");
+				throw new Exception("Openfort SDK not initialized");
+			}
+
+			Debug.Log("Getting access token from Openfort SDK...");
+			try
+			{
+				accessToken = await Openfort.GetAccessToken();
+				Debug.Log("Access token obtained: " + (string.IsNullOrEmpty(accessToken) ? "EMPTY" : "SUCCESS"));
+
+				if (string.IsNullOrEmpty(accessToken))
+				{
+					Debug.LogError("Access token is null or empty");
+					throw new Exception("Access token is null or empty");
+				}
+			}
+			catch (Exception e)
+			{
+				Debug.LogError("Failed to get access token: " + e.Message);
+				throw;
+			}
+
+			// Get encryption session from API
+			// substitute with your backend endpoint
+			var webRequest = UnityWebRequest.PostWwwForm("https://firebase-auth-embedded-wallet.vercel.app/api/protected-create-encryption-session", "");
+			webRequest.SetRequestHeader("Authorization", "Bearer " + accessToken);
+			webRequest.SetRequestHeader("Content-Type", "application/json");
+			webRequest.SetRequestHeader("Accept", "application/json");
+
+			Debug.Log("Sending web request...");
+			await SendWebRequestAsync(webRequest);
+
+			Debug.Log($"Web request completed. Result: {webRequest.result}, Response Code: {webRequest.responseCode}");
+
+			if (webRequest.result != UnityWebRequest.Result.Success)
+			{
+				Debug.LogError($"Web request failed - Result: {webRequest.result}, Error: {webRequest.error}, Response Code: {webRequest.responseCode}");
+				throw new Exception($"Cannot resolve destination host: {webRequest.error}");
+			}
+
+			var responseText = webRequest.downloadHandler.text;
+			Debug.Log("Response received: " + responseText);
+
+			var responseJson = JsonConvert.DeserializeObject<Dictionary<string, string>>(responseText);
+			var encryptionSession = responseJson["session"];
+			Debug.Log("Encryption session: " + encryptionSession);
+
+			var recoveryParams = new AutomaticRecoveryParams(encryptionSession);
+
+			ConfigureEmbeddedWalletRequest request = new ConfigureEmbeddedWalletRequest(
+				recoveryParams: recoveryParams,
+				chainId: chainId
+			);
+
+			Debug.Log("Configuring embedded wallet...");
+			await Openfort.ConfigureEmbeddedWallet(request);
+			Debug.Log("=== SetAutomaticRecoveryMethod completed successfully ===");
+		}
+		catch (Exception ex)
+		{
+			Debug.LogError($"=== SetAutomaticRecoveryMethod FAILED: {ex.Message} ===");
+			Debug.LogError($"Stack trace: {ex.StackTrace}");
+			throw;
+		}
 	}
 
-	public async void AuthenticateWithOAuth(string idToken, string accessToken)
+	public async Task Init(Func<string, Task<string>> getThirdPartyToken)
 	{
-		Debug.Log("Google Sign-In Success! Token: " + idToken);
-		accessToken = accessToken;
-		Debug.Log("Openfort Auth");
-        if (OpenfortSDK.Instance != null)
-        {
-            Openfort = OpenfortSDK.Instance;
-        }
-		Openfort = await OpenfortSDK.Init(PublishableKey, ShieldKey, ShieldEncKey);
-		ThirdPartyOAuthRequest request = new ThirdPartyOAuthRequest(ThirdPartyOAuthProvider.Firebase, idToken, TokenType.IdToken);
-		await Openfort.AuthenticateWithThirdPartyProvider(request);
-		await SetAutomaticRecoveryMethod(idToken);
+		if (OpenfortSDK.Instance != null)
+		{
+			Openfort = OpenfortSDK.Instance;
+		}
+		Openfort = await OpenfortSDK.Init(
+			PublishableKey,
+			ShieldKey,
+			thirdPartyProvider: "firebase",
+			getThirdPartyToken: getThirdPartyToken,
+			iframeUrl: "https://development-iframe.vercel.app"
+		);
 	}
 
 	public async UniTask<string> Mint()
@@ -62,8 +130,8 @@ public class OpenfortController : MonoBehaviour
 			Debug.LogError($"mAccessToken is null or empty");
 			return null;
 		}
-
-		var webRequest = UnityWebRequest.Post("https://openfort-auth-non-custodial.vercel.app/api/protected-collect", "");
+		// substitute with your backend endpoint
+		var webRequest = UnityWebRequest.PostWwwForm("https://firebase-auth-embedded-wallet.vercel.app/api/protected-collect", "");
 		webRequest.SetRequestHeader("Authorization", "Bearer " + accessToken);
 		webRequest.SetRequestHeader("Content-Type", "application/json");
 		webRequest.SetRequestHeader("Accept", "application/json");
@@ -81,7 +149,7 @@ public class OpenfortController : MonoBehaviour
 		Debug.Log("Mint Response: " + responseText);
 		var responseJson = JsonConvert.DeserializeObject<RootObject>(responseText);
 
-        SignatureTransactionIntentRequest request = new SignatureTransactionIntentRequest(responseJson.transactionIntentId, responseJson.userOperationHash);
+		SignatureTransactionIntentRequest request = new SignatureTransactionIntentRequest(responseJson.transactionIntentId, responseJson.userOperationHash);
 		TransactionIntentResponse intentResponse = await Openfort.SendSignatureTransactionIntentRequest(request);
 		return intentResponse.Response.TransactionHash;
 	}
@@ -104,9 +172,9 @@ public class OpenfortController : MonoBehaviour
 		return tcs.Task;
 	}
 
-    public class RootObject
-    {
-        public string transactionIntentId { get; set; }
-        public string userOperationHash { get; set; }
-    }
+	public class RootObject
+	{
+		public string transactionIntentId { get; set; }
+		public string userOperationHash { get; set; }
+	}
 }

@@ -51,9 +51,9 @@ export class MintController {
                 interactions: [interaction_mint],
             });
 
-            console.log("transactionIntent", transactionIntent)
+
             return res.send({
-                data: transactionIntent,
+                userOperationHash: transactionIntent.nextActions.signableHash,
             });
         } catch (e: any) {
             console.log(e);

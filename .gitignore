@@ -25,6 +25,17 @@ unity/sysinfo.txt
 
 # Firebase unity
 *.bundle
+unity/Assets/Firebase/
+unity/Assets/Firebase.meta
+unity/Assets/GeneratedLocalRepo/Firebase/
+unity/Assets/GeneratedLocalRepo/Firebase.meta
+unity/Assets/Editor\ Default\ Resources/Firebase/
+unity/Assets/Editor\ Default\ Resources/Firebase.meta
+unity/Assets/Plugins/iOS/Firebase/
+unity/Assets/Plugins/iOS/Firebase.meta
+unity/Assets/Plugins/tvOS/Firebase/
+unity/Assets/Plugins/tvOS/Firebase.meta
+unity/Assets/Plugins/Android/FirebaseApp.androidlib*
 
 # Builds
 unity/*.apk
@@ -45,6 +56,7 @@ unity/crashlytics-build.properties
 .DS_Store
 
 backend/.env
+backend/dist/*
 backend/.DS_Store
 backend/.vscode/*
 !.vscode/extensions.json
@@ -55,3 +67,7 @@ backend/node_modules/
 # editor
 backend/.idea/
 user.keystore
+
+# Google Play Games generated project files
+unity/Google.Play.Games.Editor.csproj
+unity/Google.Play.Games.csproj
