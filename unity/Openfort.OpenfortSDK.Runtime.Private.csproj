@@ -1,0 +1,2184 @@
+﻿<Project ToolsVersion="Current">
+  <!-- Generated file, do not modify, your changes will be overwritten (use AssetPostprocessor.OnGeneratedCSProject) -->
+  <PropertyGroup>
+    <BaseIntermediateOutputPath>Temp/obj/$(Configuration)/$(MSBuildProjectName)</BaseIntermediateOutputPath>
+    <IntermediateOutputPath>$(BaseIntermediateOutputPath)</IntermediateOutputPath>
+  </PropertyGroup>
+  <Import Project="Sdk.props" Sdk="Microsoft.NET.Sdk" />
+  <ItemGroup>
+    <ProjectCapability Include="Unity" />
+  </ItemGroup>
+  <PropertyGroup>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <EnableDefaultItems>false</EnableDefaultItems>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <LangVersion>9.0</LangVersion>
+    <Configurations>Debug;Release</Configurations>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <RootNamespace>Openfort.OpenfortSDK</RootNamespace>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <AssemblyName>Openfort.OpenfortSDK.Runtime.Private</AssemblyName>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <BaseDirectory>.</BaseDirectory>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Temp/bin/Debug/</OutputPath>
+    <DefineConstants>UNITY_2022_3_22;UNITY_2022_3;UNITY_2022;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_2017_1_OR_NEWER;UNITY_2017_2_OR_NEWER;UNITY_2017_3_OR_NEWER;UNITY_2017_4_OR_NEWER;UNITY_2018_1_OR_NEWER;UNITY_2018_2_OR_NEWER;UNITY_2018_3_OR_NEWER;UNITY_2018_4_OR_NEWER;UNITY_2019_1_OR_NEWER;UNITY_2019_2_OR_NEWER;UNITY_2019_3_OR_NEWER;UNITY_2019_4_OR_NEWER;UNITY_2020_1_OR_NEWER;UNITY_2020_2_OR_NEWER;UNITY_2020_3_OR_NEWER;UNITY_2021_1_OR_NEWER;UNITY_2021_2_OR_NEWER;UNITY_2021_3_OR_NEWER;UNITY_2022_1_OR_NEWER;UNITY_2022_2_OR_NEWER;UNITY_2022_3_OR_NEWER;UNITY_INCLUDE_TESTS;ENABLE_AR;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_EVENT_QUEUE;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_TEXTURE_STREAMING;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_VR;ENABLE_WEBCAM;ENABLE_UNITYWEBREQUEST;ENABLE_WWW;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_SERVICES_USE_WEBREQUEST;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_CLOUD_SERVICES_NATIVE_CRASH_REPORTING;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_EDITOR_GAME_SERVICES;ENABLE_UNITY_GAME_SERVICES_ANALYTICS_SUPPORT;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_HUB_LICENSE;ENABLE_WEBSOCKET_CLIENT;ENABLE_GENERATE_NATIVE_PLUGINS_FOR_ASSEMBLIES_API;ENABLE_DIRECTOR_AUDIO;ENABLE_DIRECTOR_TEXTURE;ENABLE_MANAGED_JOBS;ENABLE_MANAGED_TRANSFORM_JOBS;ENABLE_MANAGED_ANIMATION_JOBS;ENABLE_MANAGED_AUDIO_JOBS;ENABLE_RUNTIME_PERMISSIONS;ENABLE_ENGINE_CODE_STRIPPING;ENABLE_ONSCREEN_KEYBOARD;ENABLE_MANAGED_UNITYTLS;INCLUDE_DYNAMIC_GI;ENABLE_SCRIPTING_GC_WBARRIERS;PLATFORM_SUPPORTS_MONO;ENABLE_VIDEO;ENABLE_ACCELERATOR_CLIENT_DEBUGGING;ENABLE_NAVIGATION_PACKAGE_DEBUG_VISUALIZATION;ENABLE_NAVIGATION_HEIGHTMESH_RUNTIME_SUPPORT;ENABLE_NAVIGATION_UI_REQUIRES_PACKAGE;PLATFORM_ANDROID;TEXTCORE_1_0_OR_NEWER;UNITY_ANDROID;UNITY_ANDROID_API;ENABLE_EGL;ENABLE_NETWORK;ENABLE_RUNTIME_GI;ENABLE_CRUNCH_TEXTURE_COMPRESSION;UNITY_CAN_SHOW_SPLASH_SCREEN;UNITY_HAS_GOOGLEVR;UNITY_HAS_TANGO;ENABLE_SPATIALTRACKING;ENABLE_ETC_COMPRESSION;PLATFORM_EXTENDS_VULKAN_DEVICE;PLATFORM_HAS_MULTIPLE_SWAPCHAINS;UNITY_ANDROID_SUPPORTS_SHADOWFILES;PLATFORM_UPDATES_TIME_OUTSIDE_OF_PLAYER_LOOP;ENABLE_UNITYADS_RUNTIME;UNITY_UNITYADS_API;ENABLE_MONO;NET_STANDARD_2_0;NET_STANDARD;NET_STANDARD_2_1;NETSTANDARD;NETSTANDARD2_1;ENABLE_PROFILER;DEBUG;TRACE;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_OSX;ENABLE_UNITY_COLLECTIONS_CHECKS;ENABLE_BURST_AOT;UNITY_TEAM_LICENSE;ENABLE_CUSTOM_RENDER_TEXTURE;ENABLE_DIRECTOR;ENABLE_LOCALIZATION;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_TILEMAP;ENABLE_TIMELINE;ENABLE_INPUT_SYSTEM;ENABLE_LEGACY_INPUT_MANAGER;TEXTCORE_FONT_ENGINE_1_5_OR_NEWER;CSHARP_7_OR_LATER;CSHARP_7_3_OR_NEWER</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoWarn>0169;USG0001</NoWarn>
+    <AllowUnsafeBlocks>False</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Temp/bin/Release/</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoWarn>0169;USG0001</NoWarn>
+    <AllowUnsafeBlocks>False</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup>
+    <NoStandardLibraries>true</NoStandardLibraries>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <DisableImplicitFrameworkReferences>true</DisableImplicitFrameworkReferences>
+    <MSBuildWarningsAsMessages>MSB3277</MSBuildWarningsAsMessages>
+  </PropertyGroup>
+  <PropertyGroup>
+    <UnityProjectGenerator>Package</UnityProjectGenerator>
+    <UnityProjectGeneratorVersion>2.0.22</UnityProjectGeneratorVersion>
+    <UnityProjectGeneratorStyle>SDK</UnityProjectGeneratorStyle>
+    <UnityProjectType>Game:1</UnityProjectType>
+    <UnityBuildTarget>Android:13</UnityBuildTarget>
+    <UnityVersion>2022.3.22f1</UnityVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <Analyzer Include="/Users/jamalavedra/.vscode/extensions/visualstudiotoolsforunity.vstuc-1.1.3/Analyzers/Microsoft.Unity.Analyzers.dll" />
+    <Analyzer Include="/Applications/Unity/Hub/Editor/2022.3.22f1/Unity.app/Contents/Tools/Unity.SourceGenerators/Unity.SourceGenerators.dll" />
+    <Analyzer Include="/Applications/Unity/Hub/Editor/2022.3.22f1/Unity.app/Contents/Tools/Unity.SourceGenerators/Unity.Properties.SourceGenerator.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/CreateApiAuthorizedNetworkRequest.cs">
+      <Link>Runtime/Scripts/Private/Model/CreateApiAuthorizedNetworkRequest.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/EpicGamesOAuthConfig.cs">
+      <Link>Runtime/Scripts/Private/Model/EpicGamesOAuthConfig.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/GasPerIntervalLimitPolicyRuleResponse.cs">
+      <Link>Runtime/Scripts/Private/Model/GasPerIntervalLimitPolicyRuleResponse.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/OAuthProviderFACEBOOK.cs">
+      <Link>Runtime/Scripts/Private/Model/OAuthProviderFACEBOOK.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/DeleteSMTPConfigResponse.cs">
+      <Link>Runtime/Scripts/Private/Model/DeleteSMTPConfigResponse.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/AuthPlayerResponse.cs">
+      <Link>Runtime/Scripts/Private/Model/AuthPlayerResponse.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/WebhookResponse.cs">
+      <Link>Runtime/Scripts/Private/Model/WebhookResponse.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/DeveloperAccountResponse.cs">
+      <Link>Runtime/Scripts/Private/Model/DeveloperAccountResponse.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/PickPlayerResponseId.cs">
+      <Link>Runtime/Scripts/Private/Model/PickPlayerResponseId.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/CheckoutResponse.cs">
+      <Link>Runtime/Scripts/Private/Model/CheckoutResponse.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/DeprecatedAuthenticatedPlayerResponse.cs">
+      <Link>Runtime/Scripts/Private/Model/DeprecatedAuthenticatedPlayerResponse.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/DeveloperAccountResponseExpandable.cs">
+      <Link>Runtime/Scripts/Private/Model/DeveloperAccountResponseExpandable.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/PrismaInputJsonValue.cs">
+      <Link>Runtime/Scripts/Private/Model/PrismaInputJsonValue.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/EntityTypeSMTPCONFIG.cs">
+      <Link>Runtime/Scripts/Private/Model/EntityTypeSMTPCONFIG.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/Web3ActionStatusEnum.cs">
+      <Link>Runtime/Scripts/Private/Model/Web3ActionStatusEnum.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/AccountPolicyRuleResponse.cs">
+      <Link>Runtime/Scripts/Private/Model/AccountPolicyRuleResponse.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/EmbeddedResponse.cs">
+      <Link>Runtime/Scripts/Private/Model/EmbeddedResponse.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/CreateSessionRequest.cs">
+      <Link>Runtime/Scripts/Private/Model/CreateSessionRequest.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/Plan.cs">
+      <Link>Runtime/Scripts/Private/Model/Plan.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/CreateWeb3ConnectionRequest.cs">
+      <Link>Runtime/Scripts/Private/Model/CreateWeb3ConnectionRequest.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/RefreshTokenRequest.cs">
+      <Link>Runtime/Scripts/Private/Model/RefreshTokenRequest.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/PlayerUpdateRequest.cs">
+      <Link>Runtime/Scripts/Private/Model/PlayerUpdateRequest.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/PlayerResponse.cs">
+      <Link>Runtime/Scripts/Private/Model/PlayerResponse.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/CustomAuthConfig.cs">
+      <Link>Runtime/Scripts/Private/Model/CustomAuthConfig.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/Request/SignTypedDataRequest.cs">
+      <Link>Runtime/Scripts/Private/Model/Request/SignTypedDataRequest.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/ThirdPartyOAuthProviderTELEGRAMMINIAPP.cs">
+      <Link>Runtime/Scripts/Private/Model/ThirdPartyOAuthProviderTELEGRAMMINIAPP.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/ExportedEmbeddedRequest.cs">
+      <Link>Runtime/Scripts/Private/Model/ExportedEmbeddedRequest.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/AuthPlayerResponsePlayer.cs">
+      <Link>Runtime/Scripts/Private/Model/AuthPlayerResponsePlayer.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/EmailAuthConfig.cs">
+      <Link>Runtime/Scripts/Private/Model/EmailAuthConfig.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/Request/PoolOAuthRequest.cs">
+      <Link>Runtime/Scripts/Private/Model/Request/PoolOAuthRequest.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/TypedDataField.cs">
+      <Link>Runtime/Scripts/Private/Model/TypedDataField.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/SIWEInitResponse.cs">
+      <Link>Runtime/Scripts/Private/Model/SIWEInitResponse.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/UserProjectCreateRequest.cs">
+      <Link>Runtime/Scripts/Private/Model/UserProjectCreateRequest.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/UpdatePolicyRequest.cs">
+      <Link>Runtime/Scripts/Private/Model/UpdatePolicyRequest.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/MyEcosystemResponse.cs">
+      <Link>Runtime/Scripts/Private/Model/MyEcosystemResponse.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/LinkedAccountResponse.cs">
+      <Link>Runtime/Scripts/Private/Model/LinkedAccountResponse.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/OAuthConfig.cs">
+      <Link>Runtime/Scripts/Private/Model/OAuthConfig.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/SessionResponseExpandable.cs">
+      <Link>Runtime/Scripts/Private/Model/SessionResponseExpandable.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/GasReport.cs">
+      <Link>Runtime/Scripts/Private/Model/GasReport.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/OAuthProvider.cs">
+      <Link>Runtime/Scripts/Private/Model/OAuthProvider.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/LootLockerOAuthConfig.cs">
+      <Link>Runtime/Scripts/Private/Model/LootLockerOAuthConfig.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/EntityTypeWEB3ACTION.cs">
+      <Link>Runtime/Scripts/Private/Model/EntityTypeWEB3ACTION.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/EmailTypeResponse.cs">
+      <Link>Runtime/Scripts/Private/Model/EmailTypeResponse.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/UserProjectCreateRequestRole.cs">
+      <Link>Runtime/Scripts/Private/Model/UserProjectCreateRequestRole.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/UpsertSMTPConfigRequest.cs">
+      <Link>Runtime/Scripts/Private/Model/UpsertSMTPConfigRequest.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/PolicyRuleTypeACCOUNT.cs">
+      <Link>Runtime/Scripts/Private/Model/PolicyRuleTypeACCOUNT.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/AssetType.cs">
+      <Link>Runtime/Scripts/Private/Model/AssetType.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/AuthenticationType.cs">
+      <Link>Runtime/Scripts/Private/Model/AuthenticationType.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/APITriggerType.cs">
+      <Link>Runtime/Scripts/Private/Model/APITriggerType.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/AuthSessionResponse.cs">
+      <Link>Runtime/Scripts/Private/Model/AuthSessionResponse.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/OpenfortSDKImpl.cs">
+      <Link>Runtime/Scripts/Private/OpenfortSDKImpl.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/Request/RequestEmailVerificationRequest.cs">
+      <Link>Runtime/Scripts/Private/Model/Request/RequestEmailVerificationRequest.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/TelegramOAuthConfig.cs">
+      <Link>Runtime/Scripts/Private/Model/TelegramOAuthConfig.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/ThirdPartyOAuthRequest.cs">
+      <Link>Runtime/Scripts/Private/Model/ThirdPartyOAuthRequest.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/UserProjectResponse.cs">
+      <Link>Runtime/Scripts/Private/Model/UserProjectResponse.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/DomainData.cs">
+      <Link>Runtime/Scripts/Private/Model/DomainData.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/APITopicBALANCEDEVACCOUNT.cs">
+      <Link>Runtime/Scripts/Private/Model/APITopicBALANCEDEVACCOUNT.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/FacebookOAuthConfig.cs">
+      <Link>Runtime/Scripts/Private/Model/FacebookOAuthConfig.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/ContractDeleteResponse.cs">
+      <Link>Runtime/Scripts/Private/Model/ContractDeleteResponse.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/AuthResponse.cs">
+      <Link>Runtime/Scripts/Private/Model/AuthResponse.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/AuthProviderWithTypeResponse.cs">
+      <Link>Runtime/Scripts/Private/Model/AuthProviderWithTypeResponse.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/StandardDetails.cs">
+      <Link>Runtime/Scripts/Private/Model/StandardDetails.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/EntityTypeEVENT.cs">
+      <Link>Runtime/Scripts/Private/Model/EntityTypeEVENT.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/ContractResponse.cs">
+      <Link>Runtime/Scripts/Private/Model/ContractResponse.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/EventDeleteResponse.cs">
+      <Link>Runtime/Scripts/Private/Model/EventDeleteResponse.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/NextActionPayload.cs">
+      <Link>Runtime/Scripts/Private/Model/NextActionPayload.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/Request/LinkEmailPasswordRequest.cs">
+      <Link>Runtime/Scripts/Private/Model/Request/LinkEmailPasswordRequest.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/SponsorSchemaPAYFORUSER.cs">
+      <Link>Runtime/Scripts/Private/Model/SponsorSchemaPAYFORUSER.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/ApiKeyResponse.cs">
+      <Link>Runtime/Scripts/Private/Model/ApiKeyResponse.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/PlayerDeleteResponse.cs">
+      <Link>Runtime/Scripts/Private/Model/PlayerDeleteResponse.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/CreatePaymasterRequest.cs">
+      <Link>Runtime/Scripts/Private/Model/CreatePaymasterRequest.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/Response/InitSiweResponse.cs">
+      <Link>Runtime/Scripts/Private/Model/Response/InitSiweResponse.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/CreateSubscriptionRequest.cs">
+      <Link>Runtime/Scripts/Private/Model/CreateSubscriptionRequest.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/ChildProjectResponse.cs">
+      <Link>Runtime/Scripts/Private/Model/ChildProjectResponse.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/StartRecoveryRequest.cs">
+      <Link>Runtime/Scripts/Private/Model/StartRecoveryRequest.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/AuthorizePlayerRequest.cs">
+      <Link>Runtime/Scripts/Private/Model/AuthorizePlayerRequest.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/InventoryListResponse.cs">
+      <Link>Runtime/Scripts/Private/Model/InventoryListResponse.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/UpdateSMTPConfigRequest.cs">
+      <Link>Runtime/Scripts/Private/Model/UpdateSMTPConfigRequest.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/DeployRequest.cs">
+      <Link>Runtime/Scripts/Private/Model/DeployRequest.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/CreateExchangeRequest.cs">
+      <Link>Runtime/Scripts/Private/Model/CreateExchangeRequest.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/PolicyDeleteResponse.cs">
+      <Link>Runtime/Scripts/Private/Model/PolicyDeleteResponse.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/PolicyResponsePolicyRulesInner.cs">
+      <Link>Runtime/Scripts/Private/Model/PolicyResponsePolicyRulesInner.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/PolicyRuleListQueries.cs">
+      <Link>Runtime/Scripts/Private/Model/PolicyRuleListQueries.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/Currency.cs">
+      <Link>Runtime/Scripts/Private/Model/Currency.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/PolicyRateLimitGASPERTRANSACTION.cs">
+      <Link>Runtime/Scripts/Private/Model/PolicyRateLimitGASPERTRANSACTION.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/GoogleOAuthConfig.cs">
+      <Link>Runtime/Scripts/Private/Model/GoogleOAuthConfig.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/EntityTypeWEB3CONNECTION.cs">
+      <Link>Runtime/Scripts/Private/Model/EntityTypeWEB3CONNECTION.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/SortOrder.cs">
+      <Link>Runtime/Scripts/Private/Model/SortOrder.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/UserOperationV6.cs">
+      <Link>Runtime/Scripts/Private/Model/UserOperationV6.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/ThirdPartyOAuthProviderSUPABASE.cs">
+      <Link>Runtime/Scripts/Private/Model/ThirdPartyOAuthProviderSUPABASE.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/ProjectLogs.cs">
+      <Link>Runtime/Scripts/Private/Model/ProjectLogs.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/ResponseResponse.cs">
+      <Link>Runtime/Scripts/Private/Model/ResponseResponse.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/PlayFabOAuthConfig.cs">
+      <Link>Runtime/Scripts/Private/Model/PlayFabOAuthConfig.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/PolicyReportQueries.cs">
+      <Link>Runtime/Scripts/Private/Model/PolicyReportQueries.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/CreateSMTPConfigRequest.cs">
+      <Link>Runtime/Scripts/Private/Model/CreateSMTPConfigRequest.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/ForwarderContractResponse.cs">
+      <Link>Runtime/Scripts/Private/Model/ForwarderContractResponse.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/OAuthProviderTWITTER.cs">
+      <Link>Runtime/Scripts/Private/Model/OAuthProviderTWITTER.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/PlayerListResponse.cs">
+      <Link>Runtime/Scripts/Private/Model/PlayerListResponse.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/PlayerCancelTransferOwnershipRequest.cs">
+      <Link>Runtime/Scripts/Private/Model/PlayerCancelTransferOwnershipRequest.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/AuthConfig.cs">
+      <Link>Runtime/Scripts/Private/Model/AuthConfig.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/PagingQueries.cs">
+      <Link>Runtime/Scripts/Private/Model/PagingQueries.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/TransactionIntentResponseExpandable.cs">
+      <Link>Runtime/Scripts/Private/Model/TransactionIntentResponseExpandable.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/RegisterEmbeddedRequest.cs">
+      <Link>Runtime/Scripts/Private/Model/RegisterEmbeddedRequest.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/AccelbyteOAuthConfig.cs">
+      <Link>Runtime/Scripts/Private/Model/AccelbyteOAuthConfig.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/CreateAuthPlayerRequest.cs">
+      <Link>Runtime/Scripts/Private/Model/CreateAuthPlayerRequest.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/ContractListQueries.cs">
+      <Link>Runtime/Scripts/Private/Model/ContractListQueries.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/EntityTypeDEVELOPERACCOUNT.cs">
+      <Link>Runtime/Scripts/Private/Model/EntityTypeDEVELOPERACCOUNT.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/Authorize200Response.cs">
+      <Link>Runtime/Scripts/Private/Model/Authorize200Response.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/FieldErrorsValue.cs">
+      <Link>Runtime/Scripts/Private/Model/FieldErrorsValue.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/Request/CreateEmbeddedWalletRequest.cs">
+      <Link>Runtime/Scripts/Private/Model/Request/CreateEmbeddedWalletRequest.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/UpdateProjectApiKeyRequest.cs">
+      <Link>Runtime/Scripts/Private/Model/UpdateProjectApiKeyRequest.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/ListSubscriptionLogsRequest.cs">
+      <Link>Runtime/Scripts/Private/Model/ListSubscriptionLogsRequest.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/PolicyRuleTypeRATELIMIT.cs">
+      <Link>Runtime/Scripts/Private/Model/PolicyRuleTypeRATELIMIT.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/ErrorTypeINVALIDREQUESTERROR.cs">
+      <Link>Runtime/Scripts/Private/Model/ErrorTypeINVALIDREQUESTERROR.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/EntityTypeSUBSCRIPTION.cs">
+      <Link>Runtime/Scripts/Private/Model/EntityTypeSUBSCRIPTION.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/PrivateKeyPolicy.cs">
+      <Link>Runtime/Scripts/Private/Model/PrivateKeyPolicy.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/PolicyRuleResponse.cs">
+      <Link>Runtime/Scripts/Private/Model/PolicyRuleResponse.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/Fee.cs">
+      <Link>Runtime/Scripts/Private/Model/Fee.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/ApiAuthorizedNetworkDeleteResponse.cs">
+      <Link>Runtime/Scripts/Private/Model/ApiAuthorizedNetworkDeleteResponse.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/TransactionIntentListResponse.cs">
+      <Link>Runtime/Scripts/Private/Model/TransactionIntentListResponse.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/SignPayloadResponse.cs">
+      <Link>Runtime/Scripts/Private/Model/SignPayloadResponse.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/PolicyReportTransactionIntentsQueries.cs">
+      <Link>Runtime/Scripts/Private/Model/PolicyReportTransactionIntentsQueries.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/PickContractResponseId.cs">
+      <Link>Runtime/Scripts/Private/Model/PickContractResponseId.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/DeveloperAccountListResponse.cs">
+      <Link>Runtime/Scripts/Private/Model/DeveloperAccountListResponse.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/TriggerDeleteResponse.cs">
+      <Link>Runtime/Scripts/Private/Model/TriggerDeleteResponse.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/BaseEntityListResponseDeviceResponse.cs">
+      <Link>Runtime/Scripts/Private/Model/BaseEntityListResponseDeviceResponse.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/BalanceResponse.cs">
+      <Link>Runtime/Scripts/Private/Model/BalanceResponse.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/PlayerInventoryQueries.cs">
+      <Link>Runtime/Scripts/Private/Model/PlayerInventoryQueries.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/CompleteRecoveryRequest.cs">
+      <Link>Runtime/Scripts/Private/Model/CompleteRecoveryRequest.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/UpdateEmailSampleRequest.cs">
+      <Link>Runtime/Scripts/Private/Model/UpdateEmailSampleRequest.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/UpdateProjectRequest.cs">
+      <Link>Runtime/Scripts/Private/Model/UpdateProjectRequest.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/Request/UnlinkWalletRequest.cs">
+      <Link>Runtime/Scripts/Private/Model/Request/UnlinkWalletRequest.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/OAuthProviderDISCORD.cs">
+      <Link>Runtime/Scripts/Private/Model/OAuthProviderDISCORD.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/ThirdPartyOAuthProvider.cs">
+      <Link>Runtime/Scripts/Private/Model/ThirdPartyOAuthProvider.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/CheckoutRequest.cs">
+      <Link>Runtime/Scripts/Private/Model/CheckoutRequest.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/Request/AuthCredentialsRequest.cs">
+      <Link>Runtime/Scripts/Private/Model/Request/AuthCredentialsRequest.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/OpenfortSDKFunction.cs">
+      <Link>Runtime/Scripts/Private/OpenfortSDKFunction.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/SessionListResponse.cs">
+      <Link>Runtime/Scripts/Private/Model/SessionListResponse.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/LogResponse.cs">
+      <Link>Runtime/Scripts/Private/Model/LogResponse.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/AbiType.cs">
+      <Link>Runtime/Scripts/Private/Model/AbiType.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/OAuthInitRequest.cs">
+      <Link>Runtime/Scripts/Private/Model/OAuthInitRequest.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/AssetInventory.cs">
+      <Link>Runtime/Scripts/Private/Model/AssetInventory.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/DeviceResponse.cs">
+      <Link>Runtime/Scripts/Private/Model/DeviceResponse.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/ForwarderContractDeleteResponse.cs">
+      <Link>Runtime/Scripts/Private/Model/ForwarderContractDeleteResponse.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/PlayerTransferOwnershipRequest.cs">
+      <Link>Runtime/Scripts/Private/Model/PlayerTransferOwnershipRequest.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/FirebaseOAuthConfig.cs">
+      <Link>Runtime/Scripts/Private/Model/FirebaseOAuthConfig.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/PolicyRateLimitGASPERINTERVAL.cs">
+      <Link>Runtime/Scripts/Private/Model/PolicyRateLimitGASPERINTERVAL.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Helpers/JsonHelpers.cs">
+      <Link>Runtime/Scripts/Private/Helpers/JsonHelpers.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/OAuthProviderEPICGAMES.cs">
+      <Link>Runtime/Scripts/Private/Model/OAuthProviderEPICGAMES.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/ThirdPartyOAuthProviderFIREBASE.cs">
+      <Link>Runtime/Scripts/Private/Model/ThirdPartyOAuthProviderFIREBASE.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/Request/SignatureTransactionIntentRequest.cs">
+      <Link>Runtime/Scripts/Private/Model/Request/SignatureTransactionIntentRequest.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/ThirdPartyOAuthProviderOIDC.cs">
+      <Link>Runtime/Scripts/Private/Model/ThirdPartyOAuthProviderOIDC.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/Response/Provider.cs">
+      <Link>Runtime/Scripts/Private/Model/Response/Provider.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/TransactionAbstractionType.cs">
+      <Link>Runtime/Scripts/Private/Model/TransactionAbstractionType.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/ProjectStatsResponse.cs">
+      <Link>Runtime/Scripts/Private/Model/ProjectStatsResponse.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/ApiAuthorizedNetworkListResponse.cs">
+      <Link>Runtime/Scripts/Private/Model/ApiAuthorizedNetworkListResponse.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/EcosystemConfigurationResponse.cs">
+      <Link>Runtime/Scripts/Private/Model/EcosystemConfigurationResponse.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/TransactionIntentListQueries.cs">
+      <Link>Runtime/Scripts/Private/Model/TransactionIntentListQueries.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/TransactionIntentResponsePlayer.cs">
+      <Link>Runtime/Scripts/Private/Model/TransactionIntentResponsePlayer.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/Request/UnlinkEmailPasswordRequest.cs">
+      <Link>Runtime/Scripts/Private/Model/Request/UnlinkEmailPasswordRequest.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/AuthenticatedPlayerResponse.cs">
+      <Link>Runtime/Scripts/Private/Model/AuthenticatedPlayerResponse.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/Response/InitAuthResponse.cs">
+      <Link>Runtime/Scripts/Private/Model/Response/InitAuthResponse.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/ZKSyncDetails.cs">
+      <Link>Runtime/Scripts/Private/Model/ZKSyncDetails.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/OAuthResponse.cs">
+      <Link>Runtime/Scripts/Private/Model/OAuthResponse.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/UserProjectRoleADMIN.cs">
+      <Link>Runtime/Scripts/Private/Model/UserProjectRoleADMIN.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/BasicAuthProviderEMAIL.cs">
+      <Link>Runtime/Scripts/Private/Model/BasicAuthProviderEMAIL.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/TriggerResponse.cs">
+      <Link>Runtime/Scripts/Private/Model/TriggerResponse.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/APITopic.cs">
+      <Link>Runtime/Scripts/Private/Model/APITopic.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/ContractReadQueries.cs">
+      <Link>Runtime/Scripts/Private/Model/ContractReadQueries.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/DeveloperAccountDeleteResponse.cs">
+      <Link>Runtime/Scripts/Private/Model/DeveloperAccountDeleteResponse.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/Log.cs">
+      <Link>Runtime/Scripts/Private/Model/Log.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/PlayerResponseTransactionIntentsInner.cs">
+      <Link>Runtime/Scripts/Private/Model/PlayerResponseTransactionIntentsInner.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/ChargeCustomTokenPolicyStrategy.cs">
+      <Link>Runtime/Scripts/Private/Model/ChargeCustomTokenPolicyStrategy.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/BasicAuthProvider.cs">
+      <Link>Runtime/Scripts/Private/Model/BasicAuthProvider.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/AccountResponseExpandable.cs">
+      <Link>Runtime/Scripts/Private/Model/AccountResponseExpandable.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/UnlinkOAuthRequest.cs">
+      <Link>Runtime/Scripts/Private/Model/UnlinkOAuthRequest.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/UserProjectListResponse.cs">
+      <Link>Runtime/Scripts/Private/Model/UserProjectListResponse.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/Request/LinkWalletRequest.cs">
+      <Link>Runtime/Scripts/Private/Model/Request/LinkWalletRequest.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/APITopicTRANSACTIONSUCCESSFUL.cs">
+      <Link>Runtime/Scripts/Private/Model/APITopicTRANSACTIONSUCCESSFUL.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/CancelTransferOwnershipRequest.cs">
+      <Link>Runtime/Scripts/Private/Model/CancelTransferOwnershipRequest.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/SponsorSchema.cs">
+      <Link>Runtime/Scripts/Private/Model/SponsorSchema.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/ContractListResponse.cs">
+      <Link>Runtime/Scripts/Private/Model/ContractListResponse.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/PlayerMetadataValue.cs">
+      <Link>Runtime/Scripts/Private/Model/PlayerMetadataValue.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/DeveloperAccountGetMessageResponse.cs">
+      <Link>Runtime/Scripts/Private/Model/DeveloperAccountGetMessageResponse.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/TransactionIntentResponsePolicy.cs">
+      <Link>Runtime/Scripts/Private/Model/TransactionIntentResponsePolicy.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/ProjectResponse.cs">
+      <Link>Runtime/Scripts/Private/Model/ProjectResponse.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/GasReportTransactionIntents.cs">
+      <Link>Runtime/Scripts/Private/Model/GasReportTransactionIntents.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/EntityTypeINVENTORY.cs">
+      <Link>Runtime/Scripts/Private/Model/EntityTypeINVENTORY.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/ThirdPartyLinkRequest.cs">
+      <Link>Runtime/Scripts/Private/Model/ThirdPartyLinkRequest.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/EntityTypeTRANSACTIONINTENT.cs">
+      <Link>Runtime/Scripts/Private/Model/EntityTypeTRANSACTIONINTENT.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/LoginRequest.cs">
+      <Link>Runtime/Scripts/Private/Model/LoginRequest.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/APITopicBALANCECONTRACT.cs">
+      <Link>Runtime/Scripts/Private/Model/APITopicBALANCECONTRACT.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/Request/ListWalletsRequest.cs">
+      <Link>Runtime/Scripts/Private/Model/Request/ListWalletsRequest.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/PlayerResponseAccountsInner.cs">
+      <Link>Runtime/Scripts/Private/Model/PlayerResponseAccountsInner.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/TransactionStat.cs">
+      <Link>Runtime/Scripts/Private/Model/TransactionStat.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/EventResponse.cs">
+      <Link>Runtime/Scripts/Private/Model/EventResponse.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/WithdrawalPolicyRequest.cs">
+      <Link>Runtime/Scripts/Private/Model/WithdrawalPolicyRequest.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/RequestResetPasswordRequest.cs">
+      <Link>Runtime/Scripts/Private/Model/RequestResetPasswordRequest.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/PayForUserPolicyStrategy.cs">
+      <Link>Runtime/Scripts/Private/Model/PayForUserPolicyStrategy.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/EmailSampleDeleteResponse.cs">
+      <Link>Runtime/Scripts/Private/Model/EmailSampleDeleteResponse.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/AccountListQueries.cs">
+      <Link>Runtime/Scripts/Private/Model/AccountListQueries.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/AbstractOpenAPISchema.cs">
+      <Link>Runtime/Scripts/Private/Model/AbstractOpenAPISchema.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/CreateEventRequest.cs">
+      <Link>Runtime/Scripts/Private/Model/CreateEventRequest.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/PolicyStrategy.cs">
+      <Link>Runtime/Scripts/Private/Model/PolicyStrategy.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/CreateTransactionIntentRequest.cs">
+      <Link>Runtime/Scripts/Private/Model/CreateTransactionIntentRequest.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/GasReportTransactionIntentsInner.cs">
+      <Link>Runtime/Scripts/Private/Model/GasReportTransactionIntentsInner.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Event/OpenfortSDKAuthEvent.cs">
+      <Link>Runtime/Scripts/Private/Event/OpenfortSDKAuthEvent.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/EntityTypeACCOUNT.cs">
+      <Link>Runtime/Scripts/Private/Model/EntityTypeACCOUNT.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/TestTrigger200Response.cs">
+      <Link>Runtime/Scripts/Private/Model/TestTrigger200Response.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/Player.cs">
+      <Link>Runtime/Scripts/Private/Model/Player.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/ChildProjectListResponse.cs">
+      <Link>Runtime/Scripts/Private/Model/ChildProjectListResponse.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/ApiKeyType.cs">
+      <Link>Runtime/Scripts/Private/Model/ApiKeyType.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/OAuthProviderGOOGLE.cs">
+      <Link>Runtime/Scripts/Private/Model/OAuthProviderGOOGLE.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/Web3ConnectionResponse.cs">
+      <Link>Runtime/Scripts/Private/Model/Web3ConnectionResponse.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/AuthProviderResponse.cs">
+      <Link>Runtime/Scripts/Private/Model/AuthProviderResponse.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/ResetPasswordRequest.cs">
+      <Link>Runtime/Scripts/Private/Model/ResetPasswordRequest.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/UpdateContractRequest.cs">
+      <Link>Runtime/Scripts/Private/Model/UpdateContractRequest.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/AccountInventoryListQueries.cs">
+      <Link>Runtime/Scripts/Private/Model/AccountInventoryListQueries.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/Abi.cs">
+      <Link>Runtime/Scripts/Private/Model/Abi.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/AuthProvider.cs">
+      <Link>Runtime/Scripts/Private/Model/AuthProvider.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/ThirdPartyOAuthProviderPLAYFAB.cs">
+      <Link>Runtime/Scripts/Private/Model/ThirdPartyOAuthProviderPLAYFAB.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/ApiAuthorizedNetworkResponse.cs">
+      <Link>Runtime/Scripts/Private/Model/ApiAuthorizedNetworkResponse.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/CreateContractRequest.cs">
+      <Link>Runtime/Scripts/Private/Model/CreateContractRequest.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/UserProjectRole.cs">
+      <Link>Runtime/Scripts/Private/Model/UserProjectRole.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/Amount.cs">
+      <Link>Runtime/Scripts/Private/Model/Amount.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/EntityTypePLAYER.cs">
+      <Link>Runtime/Scripts/Private/Model/EntityTypePLAYER.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/EmailSampleResponse.cs">
+      <Link>Runtime/Scripts/Private/Model/EmailSampleResponse.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/Money.cs">
+      <Link>Runtime/Scripts/Private/Model/Money.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/Policy.cs">
+      <Link>Runtime/Scripts/Private/Model/Policy.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/SupabaseAuthConfig.cs">
+      <Link>Runtime/Scripts/Private/Model/SupabaseAuthConfig.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/GrantOAuthResponse.cs">
+      <Link>Runtime/Scripts/Private/Model/GrantOAuthResponse.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/PolicyRuleType.cs">
+      <Link>Runtime/Scripts/Private/Model/PolicyRuleType.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/Request/ThirdPartyProviderRequest.cs">
+      <Link>Runtime/Scripts/Private/Model/Request/ThirdPartyProviderRequest.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/TransactionIntent.cs">
+      <Link>Runtime/Scripts/Private/Model/TransactionIntent.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/CodeChallenge.cs">
+      <Link>Runtime/Scripts/Private/Model/CodeChallenge.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/SessionResponse.cs">
+      <Link>Runtime/Scripts/Private/Model/SessionResponse.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/PolicyRateLimit.cs">
+      <Link>Runtime/Scripts/Private/Model/PolicyRateLimit.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/TwitterOAuthConfig.cs">
+      <Link>Runtime/Scripts/Private/Model/TwitterOAuthConfig.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/SubmitWeb3ActionRequest.cs">
+      <Link>Runtime/Scripts/Private/Model/SubmitWeb3ActionRequest.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/CreatePolicyRuleRequest.cs">
+      <Link>Runtime/Scripts/Private/Model/CreatePolicyRuleRequest.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/RevokeSessionRequest.cs">
+      <Link>Runtime/Scripts/Private/Model/RevokeSessionRequest.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/Request/InitRequest.cs">
+      <Link>Runtime/Scripts/Private/Model/Request/InitRequest.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/EntityTypeDEVICE.cs">
+      <Link>Runtime/Scripts/Private/Model/EntityTypeDEVICE.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/TradeType.cs">
+      <Link>Runtime/Scripts/Private/Model/TradeType.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/Request/SignupEmailPasswordRequest.cs">
+      <Link>Runtime/Scripts/Private/Model/Request/SignupEmailPasswordRequest.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/OAuthInitRequestOptions.cs">
+      <Link>Runtime/Scripts/Private/Model/OAuthInitRequestOptions.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/AccountListResponse.cs">
+      <Link>Runtime/Scripts/Private/Model/AccountListResponse.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/PolicyRateLimitCOUNTPERINTERVAL.cs">
+      <Link>Runtime/Scripts/Private/Model/PolicyRateLimitCOUNTPERINTERVAL.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Core/Model/BrowserRequest.cs">
+      <Link>Runtime/Scripts/Private/Core/Model/BrowserRequest.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/PolicyBalanceWithdrawResponse.cs">
+      <Link>Runtime/Scripts/Private/Model/PolicyBalanceWithdrawResponse.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/EntityTypePAYMASTER.cs">
+      <Link>Runtime/Scripts/Private/Model/EntityTypePAYMASTER.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/ProjectListResponse.cs">
+      <Link>Runtime/Scripts/Private/Model/ProjectListResponse.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/AccountResponse.cs">
+      <Link>Runtime/Scripts/Private/Model/AccountResponse.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/UpdatePolicyRuleRequest.cs">
+      <Link>Runtime/Scripts/Private/Model/UpdatePolicyRuleRequest.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/InventoryResponse.cs">
+      <Link>Runtime/Scripts/Private/Model/InventoryResponse.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/OAuthProvders.cs">
+      <Link>Runtime/Scripts/Private/Model/OAuthProvders.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/JwtKeyResponse.cs">
+      <Link>Runtime/Scripts/Private/Model/JwtKeyResponse.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/CreateProjectApiKeyRequest.cs">
+      <Link>Runtime/Scripts/Private/Model/CreateProjectApiKeyRequest.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/AuthPlayerListQueries.cs">
+      <Link>Runtime/Scripts/Private/Model/AuthPlayerListQueries.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/Response/EmbeddedState.cs">
+      <Link>Runtime/Scripts/Private/Model/Response/EmbeddedState.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/EntityTypeFORWARDERCONTRACT.cs">
+      <Link>Runtime/Scripts/Private/Model/EntityTypeFORWARDERCONTRACT.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/Exception/OpenfortException.cs">
+      <Link>Runtime/Scripts/Private/Model/Exception/OpenfortException.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/OAuthProviderTELEGRAM.cs">
+      <Link>Runtime/Scripts/Private/Model/OAuthProviderTELEGRAM.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/AuthProviderListResponse.cs">
+      <Link>Runtime/Scripts/Private/Model/AuthProviderListResponse.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/ResponseTypeLIST.cs">
+      <Link>Runtime/Scripts/Private/Model/ResponseTypeLIST.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/EntityTypePROJECT.cs">
+      <Link>Runtime/Scripts/Private/Model/EntityTypePROJECT.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/UpdateDeveloperAccountCreateRequest.cs">
+      <Link>Runtime/Scripts/Private/Model/UpdateDeveloperAccountCreateRequest.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/OIDCAuthConfig.cs">
+      <Link>Runtime/Scripts/Private/Model/OIDCAuthConfig.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/PolicyListResponse.cs">
+      <Link>Runtime/Scripts/Private/Model/PolicyListResponse.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/Response/EmbeddedAccount.cs">
+      <Link>Runtime/Scripts/Private/Model/Response/EmbeddedAccount.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/TimeIntervalType.cs">
+      <Link>Runtime/Scripts/Private/Model/TimeIntervalType.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/EntityTypeLOG.cs">
+      <Link>Runtime/Scripts/Private/Model/EntityTypeLOG.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/OAuthRequest.cs">
+      <Link>Runtime/Scripts/Private/Model/OAuthRequest.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/PlayerListQueries.cs">
+      <Link>Runtime/Scripts/Private/Model/PlayerListQueries.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/Web3ConnectionListResponse.cs">
+      <Link>Runtime/Scripts/Private/Model/Web3ConnectionListResponse.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/CreateForwarderContractRequest.cs">
+      <Link>Runtime/Scripts/Private/Model/CreateForwarderContractRequest.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/AccountEventResponse.cs">
+      <Link>Runtime/Scripts/Private/Model/AccountEventResponse.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/ListConfigRequest.cs">
+      <Link>Runtime/Scripts/Private/Model/ListConfigRequest.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/GasReportListResponse.cs">
+      <Link>Runtime/Scripts/Private/Model/GasReportListResponse.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/PolicyStrategyRequest.cs">
+      <Link>Runtime/Scripts/Private/Model/PolicyStrategyRequest.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/Request/LoginEmailPasswordRequest.cs">
+      <Link>Runtime/Scripts/Private/Model/Request/LoginEmailPasswordRequest.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/Web3ConnectionListQueries.cs">
+      <Link>Runtime/Scripts/Private/Model/Web3ConnectionListQueries.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/BaseEntityListResponseLogResponse.cs">
+      <Link>Runtime/Scripts/Private/Model/BaseEntityListResponseLogResponse.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/InitEmbeddedRequest.cs">
+      <Link>Runtime/Scripts/Private/Model/InitEmbeddedRequest.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/DeveloperAccount.cs">
+      <Link>Runtime/Scripts/Private/Model/DeveloperAccount.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/SponsorSchemaCHARGECUSTOMTOKENS.cs">
+      <Link>Runtime/Scripts/Private/Model/SponsorSchemaCHARGECUSTOMTOKENS.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/DeviceListQueries.cs">
+      <Link>Runtime/Scripts/Private/Model/DeviceListQueries.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/CheckoutSubscriptionRequest.cs">
+      <Link>Runtime/Scripts/Private/Model/CheckoutSubscriptionRequest.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/OAuthProviderLINE.cs">
+      <Link>Runtime/Scripts/Private/Model/OAuthProviderLINE.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/Request/EthereumProviderRequest.cs">
+      <Link>Runtime/Scripts/Private/Model/Request/EthereumProviderRequest.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/VerifyEmailRequest.cs">
+      <Link>Runtime/Scripts/Private/Model/VerifyEmailRequest.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/GasPerTransactionLimitPolicyRuleResponse.cs">
+      <Link>Runtime/Scripts/Private/Model/GasPerTransactionLimitPolicyRuleResponse.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/ThirdPartyOAuthProviderCUSTOM.cs">
+      <Link>Runtime/Scripts/Private/Model/ThirdPartyOAuthProviderCUSTOM.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/TokenType.cs">
+      <Link>Runtime/Scripts/Private/Model/TokenType.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/SIWERequest.cs">
+      <Link>Runtime/Scripts/Private/Model/SIWERequest.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/LogoutRequest.cs">
+      <Link>Runtime/Scripts/Private/Model/LogoutRequest.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/GrantCallbackRequest.cs">
+      <Link>Runtime/Scripts/Private/Model/GrantCallbackRequest.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/CreateEmailSampleRequest.cs">
+      <Link>Runtime/Scripts/Private/Model/CreateEmailSampleRequest.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/EntityTypeSESSION.cs">
+      <Link>Runtime/Scripts/Private/Model/EntityTypeSESSION.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/GasReportTransactionIntentsListResponse.cs">
+      <Link>Runtime/Scripts/Private/Model/GasReportTransactionIntentsListResponse.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/PolicyRuleTypeCONTRACT.cs">
+      <Link>Runtime/Scripts/Private/Model/PolicyRuleTypeCONTRACT.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/NextActionType.cs">
+      <Link>Runtime/Scripts/Private/Model/NextActionType.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/SIWEAuthenticateRequest.cs">
+      <Link>Runtime/Scripts/Private/Model/SIWEAuthenticateRequest.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/PlansResponse.cs">
+      <Link>Runtime/Scripts/Private/Model/PlansResponse.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/DeveloperAccountListQueries.cs">
+      <Link>Runtime/Scripts/Private/Model/DeveloperAccountListQueries.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/PlayerInventoryListQueries.cs">
+      <Link>Runtime/Scripts/Private/Model/PlayerInventoryListQueries.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/Request/SetThirdPartyTokenRequest.cs">
+      <Link>Runtime/Scripts/Private/Model/Request/SetThirdPartyTokenRequest.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/UserProjectRoleMEMBER.cs">
+      <Link>Runtime/Scripts/Private/Model/UserProjectRoleMEMBER.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/ProjectStatsRequest.cs">
+      <Link>Runtime/Scripts/Private/Model/ProjectStatsRequest.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/JwtKey.cs">
+      <Link>Runtime/Scripts/Private/Model/JwtKey.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/EntityTypeTRIGGER.cs">
+      <Link>Runtime/Scripts/Private/Model/EntityTypeTRIGGER.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/SubscriptionResponse.cs">
+      <Link>Runtime/Scripts/Private/Model/SubscriptionResponse.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/SMTPConfigResponse.cs">
+      <Link>Runtime/Scripts/Private/Model/SMTPConfigResponse.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/DeveloperAccountCreateRequest.cs">
+      <Link>Runtime/Scripts/Private/Model/DeveloperAccountCreateRequest.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/SignupRequest.cs">
+      <Link>Runtime/Scripts/Private/Model/SignupRequest.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/TypedDomainData.cs">
+      <Link>Runtime/Scripts/Private/Model/TypedDomainData.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/CreateDeviceRequest.cs">
+      <Link>Runtime/Scripts/Private/Model/CreateDeviceRequest.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/Web3ConnectionResponsePlayer.cs">
+      <Link>Runtime/Scripts/Private/Model/Web3ConnectionResponsePlayer.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/NextActionResponse.cs">
+      <Link>Runtime/Scripts/Private/Model/NextActionResponse.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/EntityTypePOLICYRULE.cs">
+      <Link>Runtime/Scripts/Private/Model/EntityTypePOLICYRULE.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/Interaction.cs">
+      <Link>Runtime/Scripts/Private/Model/Interaction.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/PolicyRuleDeleteResponse.cs">
+      <Link>Runtime/Scripts/Private/Model/PolicyRuleDeleteResponse.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/SessionListQueries.cs">
+      <Link>Runtime/Scripts/Private/Model/SessionListQueries.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/TransferOwnershipRequest.cs">
+      <Link>Runtime/Scripts/Private/Model/TransferOwnershipRequest.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Core/Model/BrowserResponse.cs">
+      <Link>Runtime/Scripts/Private/Core/Model/BrowserResponse.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/TransactionIntentResponseAccount.cs">
+      <Link>Runtime/Scripts/Private/Model/TransactionIntentResponseAccount.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/AuthenticateOAuthRequest.cs">
+      <Link>Runtime/Scripts/Private/Model/AuthenticateOAuthRequest.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/Request/AuthenticateWithSiweRequest.cs">
+      <Link>Runtime/Scripts/Private/Model/Request/AuthenticateWithSiweRequest.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/EntityTypeUSER.cs">
+      <Link>Runtime/Scripts/Private/Model/EntityTypeUSER.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/Request/SignMessageRequest.cs">
+      <Link>Runtime/Scripts/Private/Model/Request/SignMessageRequest.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/PlayerResponseExpandable.cs">
+      <Link>Runtime/Scripts/Private/Model/PlayerResponseExpandable.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/Web3ActionListResponse.cs">
+      <Link>Runtime/Scripts/Private/Model/Web3ActionListResponse.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Helpers/UriHelpers.cs">
+      <Link>Runtime/Scripts/Private/Helpers/UriHelpers.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/InvalidRequestErrorResponse.cs">
+      <Link>Runtime/Scripts/Private/Model/InvalidRequestErrorResponse.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/EmailTypeRequest.cs">
+      <Link>Runtime/Scripts/Private/Model/EmailTypeRequest.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/CreatePolicyRequest.cs">
+      <Link>Runtime/Scripts/Private/Model/CreatePolicyRequest.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/Stat.cs">
+      <Link>Runtime/Scripts/Private/Model/Stat.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/CreateEcosystemConfigurationRequest.cs">
+      <Link>Runtime/Scripts/Private/Model/CreateEcosystemConfigurationRequest.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/Request/InitLinkOAuthRequest.cs">
+      <Link>Runtime/Scripts/Private/Model/Request/InitLinkOAuthRequest.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/Status.cs">
+      <Link>Runtime/Scripts/Private/Model/Status.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/TransactionConfirmedEventResponse.cs">
+      <Link>Runtime/Scripts/Private/Model/TransactionConfirmedEventResponse.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/ContractReadResponse.cs">
+      <Link>Runtime/Scripts/Private/Model/ContractReadResponse.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/Request/InitSiweRequest.cs">
+      <Link>Runtime/Scripts/Private/Model/Request/InitSiweRequest.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/EntityTypeCONTRACT.cs">
+      <Link>Runtime/Scripts/Private/Model/EntityTypeCONTRACT.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/TransactionIntentDetails.cs">
+      <Link>Runtime/Scripts/Private/Model/TransactionIntentDetails.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/BalanceEventResponse.cs">
+      <Link>Runtime/Scripts/Private/Model/BalanceEventResponse.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/Account.cs">
+      <Link>Runtime/Scripts/Private/Model/Account.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/ContractEventResponse.cs">
+      <Link>Runtime/Scripts/Private/Model/ContractEventResponse.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/CreateAccountRequest.cs">
+      <Link>Runtime/Scripts/Private/Model/CreateAccountRequest.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/CodeChallengeVerify.cs">
+      <Link>Runtime/Scripts/Private/Model/CodeChallengeVerify.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/PolicyResponseExpandable.cs">
+      <Link>Runtime/Scripts/Private/Model/PolicyResponseExpandable.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/ContractPolicyRuleResponse.cs">
+      <Link>Runtime/Scripts/Private/Model/ContractPolicyRuleResponse.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/MonthRange.cs">
+      <Link>Runtime/Scripts/Private/Model/MonthRange.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/APITopicBALANCEPROJECT.cs">
+      <Link>Runtime/Scripts/Private/Model/APITopicBALANCEPROJECT.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/OAuthConfigListResponse.cs">
+      <Link>Runtime/Scripts/Private/Model/OAuthConfigListResponse.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/EntityTypeSIGNATURE.cs">
+      <Link>Runtime/Scripts/Private/Model/EntityTypeSIGNATURE.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/BaseEntityListResponseEmailSampleResponse.cs">
+      <Link>Runtime/Scripts/Private/Model/BaseEntityListResponseEmailSampleResponse.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/ThirdPartyOAuthProviderLOOTLOCKER.cs">
+      <Link>Runtime/Scripts/Private/Model/ThirdPartyOAuthProviderLOOTLOCKER.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/EventListQueries.cs">
+      <Link>Runtime/Scripts/Private/Model/EventListQueries.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/DiscordOAuthConfig.cs">
+      <Link>Runtime/Scripts/Private/Model/DiscordOAuthConfig.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/ContractPolicyRuleResponseContract.cs">
+      <Link>Runtime/Scripts/Private/Model/ContractPolicyRuleResponseContract.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/EstimateTransactionIntentGasResult.cs">
+      <Link>Runtime/Scripts/Private/Model/EstimateTransactionIntentGasResult.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/EntityTypeEMAILSAMPLE.cs">
+      <Link>Runtime/Scripts/Private/Model/EntityTypeEMAILSAMPLE.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/CountPerIntervalLimitPolicyRuleResponse.cs">
+      <Link>Runtime/Scripts/Private/Model/CountPerIntervalLimitPolicyRuleResponse.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/PolicyResponse.cs">
+      <Link>Runtime/Scripts/Private/Model/PolicyResponse.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/FixedRateTokenPolicyStrategy.cs">
+      <Link>Runtime/Scripts/Private/Model/FixedRateTokenPolicyStrategy.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/UserProjectDeleteResponse.cs">
+      <Link>Runtime/Scripts/Private/Model/UserProjectDeleteResponse.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/AuthPlayerResponseWithRecoveryShare.cs">
+      <Link>Runtime/Scripts/Private/Model/AuthPlayerResponseWithRecoveryShare.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/Token.cs">
+      <Link>Runtime/Scripts/Private/Model/Token.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/SubscriptionResponsePlan.cs">
+      <Link>Runtime/Scripts/Private/Model/SubscriptionResponsePlan.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/Request/RecoverEmbeddedWalletRequest.cs">
+      <Link>Runtime/Scripts/Private/Model/Request/RecoverEmbeddedWalletRequest.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/InvalidRequestError.cs">
+      <Link>Runtime/Scripts/Private/Model/InvalidRequestError.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/PolicyRuleListResponse.cs">
+      <Link>Runtime/Scripts/Private/Model/PolicyRuleListResponse.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/Web3ConnectionResponseExpandable.cs">
+      <Link>Runtime/Scripts/Private/Model/Web3ConnectionResponseExpandable.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/ThirdPartyOAuthProviderACCELBYTE.cs">
+      <Link>Runtime/Scripts/Private/Model/ThirdPartyOAuthProviderACCELBYTE.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/Request/ValidateAndRefreshTokenRequest.cs">
+      <Link>Runtime/Scripts/Private/Model/Request/ValidateAndRefreshTokenRequest.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/PlayerCreateRequest.cs">
+      <Link>Runtime/Scripts/Private/Model/PlayerCreateRequest.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/PolicyListQueries.cs">
+      <Link>Runtime/Scripts/Private/Model/PolicyListQueries.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/CreateTriggerRequest.cs">
+      <Link>Runtime/Scripts/Private/Model/CreateTriggerRequest.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/LoginOIDCRequest.cs">
+      <Link>Runtime/Scripts/Private/Model/LoginOIDCRequest.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/LineOAuthConfig.cs">
+      <Link>Runtime/Scripts/Private/Model/LineOAuthConfig.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/SponsorSchemaFIXEDRATE.cs">
+      <Link>Runtime/Scripts/Private/Model/SponsorSchemaFIXEDRATE.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/SubscriptionDeleteResponse.cs">
+      <Link>Runtime/Scripts/Private/Model/SubscriptionDeleteResponse.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/EventListResponse.cs">
+      <Link>Runtime/Scripts/Private/Model/EventListResponse.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Core/BrowserCommunicationsManager.cs">
+      <Link>Runtime/Scripts/Private/Core/BrowserCommunicationsManager.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/Request/ConfigureEmbeddedWalletRequest.cs">
+      <Link>Runtime/Scripts/Private/Model/Request/ConfigureEmbeddedWalletRequest.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/TelegramThirdPartyConfig.cs">
+      <Link>Runtime/Scripts/Private/Model/TelegramThirdPartyConfig.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/QuoteExchangeResult.cs">
+      <Link>Runtime/Scripts/Private/Model/QuoteExchangeResult.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/RequestVerifyEmailRequest.cs">
+      <Link>Runtime/Scripts/Private/Model/RequestVerifyEmailRequest.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/SignPayloadRequest.cs">
+      <Link>Runtime/Scripts/Private/Model/SignPayloadRequest.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/Web3ActionResponse.cs">
+      <Link>Runtime/Scripts/Private/Model/Web3ActionResponse.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/BaseEntityListResponseTriggerResponse.cs">
+      <Link>Runtime/Scripts/Private/Model/BaseEntityListResponseTriggerResponse.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/EntityIdResponse.cs">
+      <Link>Runtime/Scripts/Private/Model/EntityIdResponse.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/SubscriptionListResponse.cs">
+      <Link>Runtime/Scripts/Private/Model/SubscriptionListResponse.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/AuthPlayerListResponse.cs">
+      <Link>Runtime/Scripts/Private/Model/AuthPlayerListResponse.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/Response/SessionKey.cs">
+      <Link>Runtime/Scripts/Private/Model/Response/SessionKey.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/TransactionIntentResponse.cs">
+      <Link>Runtime/Scripts/Private/Model/TransactionIntentResponse.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/EntityTypePOLICY.cs">
+      <Link>Runtime/Scripts/Private/Model/EntityTypePOLICY.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/PaymasterDeleteResponse.cs">
+      <Link>Runtime/Scripts/Private/Model/PaymasterDeleteResponse.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/UnlinkEmailRequest.cs">
+      <Link>Runtime/Scripts/Private/Model/UnlinkEmailRequest.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/CreateProjectRequest.cs">
+      <Link>Runtime/Scripts/Private/Model/CreateProjectRequest.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/EntityTypeREADCONTRACT.cs">
+      <Link>Runtime/Scripts/Private/Model/EntityTypeREADCONTRACT.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/UserProjectUpdateRequest.cs">
+      <Link>Runtime/Scripts/Private/Model/UserProjectUpdateRequest.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/SignatureRequest.cs">
+      <Link>Runtime/Scripts/Private/Model/SignatureRequest.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/PaymasterResponse.cs">
+      <Link>Runtime/Scripts/Private/Model/PaymasterResponse.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/CreateDeveloperAccountCreateRequest.cs">
+      <Link>Runtime/Scripts/Private/Model/CreateDeveloperAccountCreateRequest.cs</Link>
+    </Compile>
+    <Compile Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Model/AccountAbstractionV6Details.cs">
+      <Link>Runtime/Scripts/Private/Model/AccountAbstractionV6Details.cs</Link>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="/Users/jamalavedra/Projects/openfort/SDK/openfort-csharp-unity/src/Packages/OpenfortSDK/Runtime/Scripts/Private/Openfort.OpenfortSDK.Runtime.Private.asmdef">
+      <Link>Runtime/Scripts/Private/Openfort.OpenfortSDK.Runtime.Private.asmdef</Link>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="UnityEngine">
+      <HintPath>/Applications/Unity/Hub/Editor/2022.3.22f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.AIModule">
+      <HintPath>/Applications/Unity/Hub/Editor/2022.3.22f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.ARModule">
+      <HintPath>/Applications/Unity/Hub/Editor/2022.3.22f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.ARModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.AccessibilityModule">
+      <HintPath>/Applications/Unity/Hub/Editor/2022.3.22f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.AccessibilityModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.AndroidJNIModule">
+      <HintPath>/Applications/Unity/Hub/Editor/2022.3.22f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.AndroidJNIModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.AnimationModule">
+      <HintPath>/Applications/Unity/Hub/Editor/2022.3.22f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.AnimationModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.AssetBundleModule">
+      <HintPath>/Applications/Unity/Hub/Editor/2022.3.22f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.AssetBundleModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.AudioModule">
+      <HintPath>/Applications/Unity/Hub/Editor/2022.3.22f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.AudioModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.ClothModule">
+      <HintPath>/Applications/Unity/Hub/Editor/2022.3.22f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.ClothModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.ContentLoadModule">
+      <HintPath>/Applications/Unity/Hub/Editor/2022.3.22f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.ContentLoadModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>/Applications/Unity/Hub/Editor/2022.3.22f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.CoreModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.CrashReportingModule">
+      <HintPath>/Applications/Unity/Hub/Editor/2022.3.22f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.CrashReportingModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.DSPGraphModule">
+      <HintPath>/Applications/Unity/Hub/Editor/2022.3.22f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.DSPGraphModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.DirectorModule">
+      <HintPath>/Applications/Unity/Hub/Editor/2022.3.22f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.DirectorModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.GIModule">
+      <HintPath>/Applications/Unity/Hub/Editor/2022.3.22f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.GIModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.GameCenterModule">
+      <HintPath>/Applications/Unity/Hub/Editor/2022.3.22f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.GameCenterModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.GridModule">
+      <HintPath>/Applications/Unity/Hub/Editor/2022.3.22f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.GridModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.HotReloadModule">
+      <HintPath>/Applications/Unity/Hub/Editor/2022.3.22f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.HotReloadModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.IMGUIModule">
+      <HintPath>/Applications/Unity/Hub/Editor/2022.3.22f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.IMGUIModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.ImageConversionModule">
+      <HintPath>/Applications/Unity/Hub/Editor/2022.3.22f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.ImageConversionModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.InputModule">
+      <HintPath>/Applications/Unity/Hub/Editor/2022.3.22f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.InputModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.InputLegacyModule">
+      <HintPath>/Applications/Unity/Hub/Editor/2022.3.22f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.InputLegacyModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.JSONSerializeModule">
+      <HintPath>/Applications/Unity/Hub/Editor/2022.3.22f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.JSONSerializeModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.LocalizationModule">
+      <HintPath>/Applications/Unity/Hub/Editor/2022.3.22f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.LocalizationModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.ParticleSystemModule">
+      <HintPath>/Applications/Unity/Hub/Editor/2022.3.22f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.ParticleSystemModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.PerformanceReportingModule">
+      <HintPath>/Applications/Unity/Hub/Editor/2022.3.22f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.PerformanceReportingModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.PhysicsModule">
+      <HintPath>/Applications/Unity/Hub/Editor/2022.3.22f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.PhysicsModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.Physics2DModule">
+      <HintPath>/Applications/Unity/Hub/Editor/2022.3.22f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.Physics2DModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.ProfilerModule">
+      <HintPath>/Applications/Unity/Hub/Editor/2022.3.22f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.ProfilerModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.PropertiesModule">
+      <HintPath>/Applications/Unity/Hub/Editor/2022.3.22f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.PropertiesModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule">
+      <HintPath>/Applications/Unity/Hub/Editor/2022.3.22f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.ScreenCaptureModule">
+      <HintPath>/Applications/Unity/Hub/Editor/2022.3.22f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.ScreenCaptureModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.SharedInternalsModule">
+      <HintPath>/Applications/Unity/Hub/Editor/2022.3.22f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.SharedInternalsModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.SpriteMaskModule">
+      <HintPath>/Applications/Unity/Hub/Editor/2022.3.22f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.SpriteMaskModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.SpriteShapeModule">
+      <HintPath>/Applications/Unity/Hub/Editor/2022.3.22f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.SpriteShapeModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.StreamingModule">
+      <HintPath>/Applications/Unity/Hub/Editor/2022.3.22f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.StreamingModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.SubstanceModule">
+      <HintPath>/Applications/Unity/Hub/Editor/2022.3.22f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.SubstanceModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.SubsystemsModule">
+      <HintPath>/Applications/Unity/Hub/Editor/2022.3.22f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.SubsystemsModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.TLSModule">
+      <HintPath>/Applications/Unity/Hub/Editor/2022.3.22f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.TLSModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.TerrainModule">
+      <HintPath>/Applications/Unity/Hub/Editor/2022.3.22f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.TerrainModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.TerrainPhysicsModule">
+      <HintPath>/Applications/Unity/Hub/Editor/2022.3.22f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.TerrainPhysicsModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.TextCoreFontEngineModule">
+      <HintPath>/Applications/Unity/Hub/Editor/2022.3.22f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.TextCoreFontEngineModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.TextCoreTextEngineModule">
+      <HintPath>/Applications/Unity/Hub/Editor/2022.3.22f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.TextCoreTextEngineModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.TextRenderingModule">
+      <HintPath>/Applications/Unity/Hub/Editor/2022.3.22f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.TextRenderingModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.TilemapModule">
+      <HintPath>/Applications/Unity/Hub/Editor/2022.3.22f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.TilemapModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UIModule">
+      <HintPath>/Applications/Unity/Hub/Editor/2022.3.22f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.UIModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UIElementsModule">
+      <HintPath>/Applications/Unity/Hub/Editor/2022.3.22f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.UIElementsModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UmbraModule">
+      <HintPath>/Applications/Unity/Hub/Editor/2022.3.22f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.UmbraModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UnityAnalyticsModule">
+      <HintPath>/Applications/Unity/Hub/Editor/2022.3.22f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.UnityAnalyticsModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UnityAnalyticsCommonModule">
+      <HintPath>/Applications/Unity/Hub/Editor/2022.3.22f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.UnityAnalyticsCommonModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UnityConnectModule">
+      <HintPath>/Applications/Unity/Hub/Editor/2022.3.22f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.UnityConnectModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UnityCurlModule">
+      <HintPath>/Applications/Unity/Hub/Editor/2022.3.22f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.UnityCurlModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UnityTestProtocolModule">
+      <HintPath>/Applications/Unity/Hub/Editor/2022.3.22f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.UnityTestProtocolModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestModule">
+      <HintPath>/Applications/Unity/Hub/Editor/2022.3.22f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.UnityWebRequestModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestAssetBundleModule">
+      <HintPath>/Applications/Unity/Hub/Editor/2022.3.22f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.UnityWebRequestAssetBundleModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestAudioModule">
+      <HintPath>/Applications/Unity/Hub/Editor/2022.3.22f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.UnityWebRequestAudioModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestTextureModule">
+      <HintPath>/Applications/Unity/Hub/Editor/2022.3.22f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.UnityWebRequestTextureModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestWWWModule">
+      <HintPath>/Applications/Unity/Hub/Editor/2022.3.22f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.UnityWebRequestWWWModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.VFXModule">
+      <HintPath>/Applications/Unity/Hub/Editor/2022.3.22f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.VFXModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.VRModule">
+      <HintPath>/Applications/Unity/Hub/Editor/2022.3.22f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.VRModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.VehiclesModule">
+      <HintPath>/Applications/Unity/Hub/Editor/2022.3.22f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.VehiclesModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.VideoModule">
+      <HintPath>/Applications/Unity/Hub/Editor/2022.3.22f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.VideoModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.WindModule">
+      <HintPath>/Applications/Unity/Hub/Editor/2022.3.22f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.WindModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.XRModule">
+      <HintPath>/Applications/Unity/Hub/Editor/2022.3.22f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.XRModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEditor">
+      <HintPath>/Applications/Unity/Hub/Editor/2022.3.22f1/Unity.app/Contents/Managed/UnityEngine/UnityEditor.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEditor.CoreModule">
+      <HintPath>/Applications/Unity/Hub/Editor/2022.3.22f1/Unity.app/Contents/Managed/UnityEngine/UnityEditor.CoreModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEditor.DeviceSimulatorModule">
+      <HintPath>/Applications/Unity/Hub/Editor/2022.3.22f1/Unity.app/Contents/Managed/UnityEngine/UnityEditor.DeviceSimulatorModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEditor.DiagnosticsModule">
+      <HintPath>/Applications/Unity/Hub/Editor/2022.3.22f1/Unity.app/Contents/Managed/UnityEngine/UnityEditor.DiagnosticsModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEditor.EditorToolbarModule">
+      <HintPath>/Applications/Unity/Hub/Editor/2022.3.22f1/Unity.app/Contents/Managed/UnityEngine/UnityEditor.EditorToolbarModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEditor.GraphViewModule">
+      <HintPath>/Applications/Unity/Hub/Editor/2022.3.22f1/Unity.app/Contents/Managed/UnityEngine/UnityEditor.GraphViewModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEditor.PresetsUIModule">
+      <HintPath>/Applications/Unity/Hub/Editor/2022.3.22f1/Unity.app/Contents/Managed/UnityEngine/UnityEditor.PresetsUIModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEditor.QuickSearchModule">
+      <HintPath>/Applications/Unity/Hub/Editor/2022.3.22f1/Unity.app/Contents/Managed/UnityEngine/UnityEditor.QuickSearchModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEditor.SceneTemplateModule">
+      <HintPath>/Applications/Unity/Hub/Editor/2022.3.22f1/Unity.app/Contents/Managed/UnityEngine/UnityEditor.SceneTemplateModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEditor.SceneViewModule">
+      <HintPath>/Applications/Unity/Hub/Editor/2022.3.22f1/Unity.app/Contents/Managed/UnityEngine/UnityEditor.SceneViewModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEditor.TextCoreFontEngineModule">
+      <HintPath>/Applications/Unity/Hub/Editor/2022.3.22f1/Unity.app/Contents/Managed/UnityEngine/UnityEditor.TextCoreFontEngineModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEditor.TextCoreTextEngineModule">
+      <HintPath>/Applications/Unity/Hub/Editor/2022.3.22f1/Unity.app/Contents/Managed/UnityEngine/UnityEditor.TextCoreTextEngineModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEditor.UIBuilderModule">
+      <HintPath>/Applications/Unity/Hub/Editor/2022.3.22f1/Unity.app/Contents/Managed/UnityEngine/UnityEditor.UIBuilderModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEditor.UIElementsModule">
+      <HintPath>/Applications/Unity/Hub/Editor/2022.3.22f1/Unity.app/Contents/Managed/UnityEngine/UnityEditor.UIElementsModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEditor.UIElementsSamplesModule">
+      <HintPath>/Applications/Unity/Hub/Editor/2022.3.22f1/Unity.app/Contents/Managed/UnityEngine/UnityEditor.UIElementsSamplesModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEditor.UnityConnectModule">
+      <HintPath>/Applications/Unity/Hub/Editor/2022.3.22f1/Unity.app/Contents/Managed/UnityEngine/UnityEditor.UnityConnectModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEditor.Graphs">
+      <HintPath>/Applications/Unity/Hub/Editor/2022.3.22f1/Unity.app/Contents/Managed/UnityEditor.Graphs.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEditor.WebGL.Extensions">
+      <HintPath>/Applications/Unity/Hub/Editor/2022.3.22f1/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEditor.OSXStandalone.Extensions">
+      <HintPath>/Applications/Unity/Hub/Editor/2022.3.22f1/Unity.app/Contents/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEditor.Android.Extensions">
+      <HintPath>/Applications/Unity/Hub/Editor/2022.3.22f1/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEditor.iOS.Extensions">
+      <HintPath>/Applications/Unity/Hub/Editor/2022.3.22f1/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEditor.WindowsStandalone.Extensions">
+      <HintPath>/Applications/Unity/Hub/Editor/2022.3.22f1/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>Library/PackageCache/com.unity.nuget.newtonsoft-json@3.2.1/Runtime/Newtonsoft.Json.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEditor.iOS.Extensions.Xcode">
+      <HintPath>/Applications/Unity/Hub/Editor/2022.3.22f1/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEditor.iOS.Extensions.Common">
+      <HintPath>/Applications/Unity/Hub/Editor/2022.3.22f1/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Common.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.Android.Types">
+      <HintPath>/Applications/Unity/Hub/Editor/2022.3.22f1/PlaybackEngines/AndroidPlayer/Unity.Android.Types.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.Android.Gradle">
+      <HintPath>/Applications/Unity/Hub/Editor/2022.3.22f1/PlaybackEngines/AndroidPlayer/Unity.Android.Gradle.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.Android.GradleProject">
+      <HintPath>/Applications/Unity/Hub/Editor/2022.3.22f1/PlaybackEngines/AndroidPlayer/Unity.Android.GradleProject.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEditor.iOS.Extensions.Xcode">
+      <HintPath>/Applications/Unity/Hub/Editor/2022.3.22f1/Unity.app/Contents/PlaybackEngines/MacStandaloneSupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="netstandard">
+      <HintPath>/Applications/Unity/Hub/Editor/2022.3.22f1/Unity.app/Contents/NetStandard/ref/2.1.0/netstandard.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Win32.Primitives">
+      <HintPath>/Applications/Unity/Hub/Editor/2022.3.22f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/Microsoft.Win32.Primitives.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.AppContext">
+      <HintPath>/Applications/Unity/Hub/Editor/2022.3.22f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.AppContext.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Buffers">
+      <HintPath>/Applications/Unity/Hub/Editor/2022.3.22f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Buffers.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Collections.Concurrent">
+      <HintPath>/Applications/Unity/Hub/Editor/2022.3.22f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Collections.Concurrent.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Collections.NonGeneric">
+      <HintPath>/Applications/Unity/Hub/Editor/2022.3.22f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Collections.NonGeneric.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Collections.Specialized">
+      <HintPath>/Applications/Unity/Hub/Editor/2022.3.22f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Collections.Specialized.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Collections">
+      <HintPath>/Applications/Unity/Hub/Editor/2022.3.22f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Collections.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.ComponentModel.EventBasedAsync">
+      <HintPath>/Applications/Unity/Hub/Editor/2022.3.22f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.ComponentModel.EventBasedAsync.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.ComponentModel.Primitives">
+      <HintPath>/Applications/Unity/Hub/Editor/2022.3.22f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.ComponentModel.Primitives.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.ComponentModel.TypeConverter">
+      <HintPath>/Applications/Unity/Hub/Editor/2022.3.22f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.ComponentModel.TypeConverter.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.ComponentModel">
+      <HintPath>/Applications/Unity/Hub/Editor/2022.3.22f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.ComponentModel.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Console">
+      <HintPath>/Applications/Unity/Hub/Editor/2022.3.22f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Console.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Data.Common">
+      <HintPath>/Applications/Unity/Hub/Editor/2022.3.22f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Data.Common.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Diagnostics.Contracts">
+      <HintPath>/Applications/Unity/Hub/Editor/2022.3.22f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Diagnostics.Contracts.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Diagnostics.Debug">
+      <HintPath>/Applications/Unity/Hub/Editor/2022.3.22f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Diagnostics.Debug.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Diagnostics.FileVersionInfo">
+      <HintPath>/Applications/Unity/Hub/Editor/2022.3.22f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Diagnostics.FileVersionInfo.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Diagnostics.Process">
+      <HintPath>/Applications/Unity/Hub/Editor/2022.3.22f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Diagnostics.Process.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Diagnostics.StackTrace">
+      <HintPath>/Applications/Unity/Hub/Editor/2022.3.22f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Diagnostics.StackTrace.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Diagnostics.TextWriterTraceListener">
+      <HintPath>/Applications/Unity/Hub/Editor/2022.3.22f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Diagnostics.TextWriterTraceListener.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Diagnostics.Tools">
+      <HintPath>/Applications/Unity/Hub/Editor/2022.3.22f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Diagnostics.Tools.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Diagnostics.TraceSource">
+      <HintPath>/Applications/Unity/Hub/Editor/2022.3.22f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Diagnostics.TraceSource.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Diagnostics.Tracing">
+      <HintPath>/Applications/Unity/Hub/Editor/2022.3.22f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Diagnostics.Tracing.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Drawing.Primitives">
+      <HintPath>/Applications/Unity/Hub/Editor/2022.3.22f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Drawing.Primitives.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Dynamic.Runtime">
+      <HintPath>/Applications/Unity/Hub/Editor/2022.3.22f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Dynamic.Runtime.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Globalization.Calendars">
+      <HintPath>/Applications/Unity/Hub/Editor/2022.3.22f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Globalization.Calendars.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Globalization.Extensions">
+      <HintPath>/Applications/Unity/Hub/Editor/2022.3.22f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Globalization.Extensions.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Globalization">
+      <HintPath>/Applications/Unity/Hub/Editor/2022.3.22f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Globalization.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.IO.Compression.ZipFile">
+      <HintPath>/Applications/Unity/Hub/Editor/2022.3.22f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.IO.Compression.ZipFile.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.IO.Compression">
+      <HintPath>/Applications/Unity/Hub/Editor/2022.3.22f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.IO.Compression.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.IO.FileSystem.DriveInfo">
+      <HintPath>/Applications/Unity/Hub/Editor/2022.3.22f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.IO.FileSystem.DriveInfo.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.IO.FileSystem.Primitives">
+      <HintPath>/Applications/Unity/Hub/Editor/2022.3.22f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.IO.FileSystem.Primitives.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.IO.FileSystem.Watcher">
+      <HintPath>/Applications/Unity/Hub/Editor/2022.3.22f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.IO.FileSystem.Watcher.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.IO.FileSystem">
+      <HintPath>/Applications/Unity/Hub/Editor/2022.3.22f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.IO.FileSystem.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.IO.IsolatedStorage">
+      <HintPath>/Applications/Unity/Hub/Editor/2022.3.22f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.IO.IsolatedStorage.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.IO.MemoryMappedFiles">
+      <HintPath>/Applications/Unity/Hub/Editor/2022.3.22f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.IO.MemoryMappedFiles.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.IO.Pipes">
+      <HintPath>/Applications/Unity/Hub/Editor/2022.3.22f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.IO.Pipes.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.IO.UnmanagedMemoryStream">
+      <HintPath>/Applications/Unity/Hub/Editor/2022.3.22f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.IO.UnmanagedMemoryStream.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.IO">
+      <HintPath>/Applications/Unity/Hub/Editor/2022.3.22f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.IO.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Linq.Expressions">
+      <HintPath>/Applications/Unity/Hub/Editor/2022.3.22f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Linq.Expressions.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Linq.Parallel">
+      <HintPath>/Applications/Unity/Hub/Editor/2022.3.22f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Linq.Parallel.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Linq.Queryable">
+      <HintPath>/Applications/Unity/Hub/Editor/2022.3.22f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Linq.Queryable.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Linq">
+      <HintPath>/Applications/Unity/Hub/Editor/2022.3.22f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Linq.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Memory">
+      <HintPath>/Applications/Unity/Hub/Editor/2022.3.22f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Memory.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Net.Http">
+      <HintPath>/Applications/Unity/Hub/Editor/2022.3.22f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Net.Http.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Net.NameResolution">
+      <HintPath>/Applications/Unity/Hub/Editor/2022.3.22f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Net.NameResolution.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Net.NetworkInformation">
+      <HintPath>/Applications/Unity/Hub/Editor/2022.3.22f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Net.NetworkInformation.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Net.Ping">
+      <HintPath>/Applications/Unity/Hub/Editor/2022.3.22f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Net.Ping.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Net.Primitives">
+      <HintPath>/Applications/Unity/Hub/Editor/2022.3.22f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Net.Primitives.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Net.Requests">
+      <HintPath>/Applications/Unity/Hub/Editor/2022.3.22f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Net.Requests.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Net.Security">
+      <HintPath>/Applications/Unity/Hub/Editor/2022.3.22f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Net.Security.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Net.Sockets">
+      <HintPath>/Applications/Unity/Hub/Editor/2022.3.22f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Net.Sockets.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Net.WebHeaderCollection">
+      <HintPath>/Applications/Unity/Hub/Editor/2022.3.22f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Net.WebHeaderCollection.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Net.WebSockets.Client">
+      <HintPath>/Applications/Unity/Hub/Editor/2022.3.22f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Net.WebSockets.Client.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Net.WebSockets">
+      <HintPath>/Applications/Unity/Hub/Editor/2022.3.22f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Net.WebSockets.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Numerics.Vectors">
+      <HintPath>/Applications/Unity/Hub/Editor/2022.3.22f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Numerics.Vectors.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.ObjectModel">
+      <HintPath>/Applications/Unity/Hub/Editor/2022.3.22f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.ObjectModel.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Reflection.DispatchProxy">
+      <HintPath>/Applications/Unity/Hub/Editor/2022.3.22f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Reflection.DispatchProxy.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Reflection.Emit.ILGeneration">
+      <HintPath>/Applications/Unity/Hub/Editor/2022.3.22f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Reflection.Emit.ILGeneration.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Reflection.Emit.Lightweight">
+      <HintPath>/Applications/Unity/Hub/Editor/2022.3.22f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Reflection.Emit.Lightweight.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Reflection.Emit">
+      <HintPath>/Applications/Unity/Hub/Editor/2022.3.22f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Reflection.Emit.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Reflection.Extensions">
+      <HintPath>/Applications/Unity/Hub/Editor/2022.3.22f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Reflection.Extensions.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Reflection.Primitives">
+      <HintPath>/Applications/Unity/Hub/Editor/2022.3.22f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Reflection.Primitives.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Reflection">
+      <HintPath>/Applications/Unity/Hub/Editor/2022.3.22f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Reflection.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Resources.Reader">
+      <HintPath>/Applications/Unity/Hub/Editor/2022.3.22f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Resources.Reader.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Resources.ResourceManager">
+      <HintPath>/Applications/Unity/Hub/Editor/2022.3.22f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Resources.ResourceManager.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Resources.Writer">
+      <HintPath>/Applications/Unity/Hub/Editor/2022.3.22f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Resources.Writer.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.VisualC">
+      <HintPath>/Applications/Unity/Hub/Editor/2022.3.22f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Runtime.CompilerServices.VisualC.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Runtime.Extensions">
+      <HintPath>/Applications/Unity/Hub/Editor/2022.3.22f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Runtime.Extensions.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Runtime.Handles">
+      <HintPath>/Applications/Unity/Hub/Editor/2022.3.22f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Runtime.Handles.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Runtime.InteropServices.RuntimeInformation">
+      <HintPath>/Applications/Unity/Hub/Editor/2022.3.22f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Runtime.InteropServices.RuntimeInformation.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Runtime.InteropServices">
+      <HintPath>/Applications/Unity/Hub/Editor/2022.3.22f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Runtime.InteropServices.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Runtime.Numerics">
+      <HintPath>/Applications/Unity/Hub/Editor/2022.3.22f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Runtime.Numerics.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization.Formatters">
+      <HintPath>/Applications/Unity/Hub/Editor/2022.3.22f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Runtime.Serialization.Formatters.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization.Json">
+      <HintPath>/Applications/Unity/Hub/Editor/2022.3.22f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Runtime.Serialization.Json.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization.Primitives">
+      <HintPath>/Applications/Unity/Hub/Editor/2022.3.22f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Runtime.Serialization.Primitives.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization.Xml">
+      <HintPath>/Applications/Unity/Hub/Editor/2022.3.22f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Runtime.Serialization.Xml.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Runtime">
+      <HintPath>/Applications/Unity/Hub/Editor/2022.3.22f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Runtime.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Security.Claims">
+      <HintPath>/Applications/Unity/Hub/Editor/2022.3.22f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Security.Claims.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Algorithms">
+      <HintPath>/Applications/Unity/Hub/Editor/2022.3.22f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Security.Cryptography.Algorithms.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Csp">
+      <HintPath>/Applications/Unity/Hub/Editor/2022.3.22f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Security.Cryptography.Csp.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Encoding">
+      <HintPath>/Applications/Unity/Hub/Editor/2022.3.22f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Security.Cryptography.Encoding.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Primitives">
+      <HintPath>/Applications/Unity/Hub/Editor/2022.3.22f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Security.Cryptography.Primitives.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.X509Certificates">
+      <HintPath>/Applications/Unity/Hub/Editor/2022.3.22f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Security.Cryptography.X509Certificates.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Security.Principal">
+      <HintPath>/Applications/Unity/Hub/Editor/2022.3.22f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Security.Principal.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Security.SecureString">
+      <HintPath>/Applications/Unity/Hub/Editor/2022.3.22f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Security.SecureString.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Text.Encoding.Extensions">
+      <HintPath>/Applications/Unity/Hub/Editor/2022.3.22f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Text.Encoding.Extensions.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Text.Encoding">
+      <HintPath>/Applications/Unity/Hub/Editor/2022.3.22f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Text.Encoding.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Text.RegularExpressions">
+      <HintPath>/Applications/Unity/Hub/Editor/2022.3.22f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Text.RegularExpressions.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Threading.Overlapped">
+      <HintPath>/Applications/Unity/Hub/Editor/2022.3.22f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Threading.Overlapped.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions">
+      <HintPath>/Applications/Unity/Hub/Editor/2022.3.22f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Threading.Tasks.Extensions.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Parallel">
+      <HintPath>/Applications/Unity/Hub/Editor/2022.3.22f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Threading.Tasks.Parallel.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Threading.Tasks">
+      <HintPath>/Applications/Unity/Hub/Editor/2022.3.22f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Threading.Tasks.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Threading.Thread">
+      <HintPath>/Applications/Unity/Hub/Editor/2022.3.22f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Threading.Thread.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Threading.ThreadPool">
+      <HintPath>/Applications/Unity/Hub/Editor/2022.3.22f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Threading.ThreadPool.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Threading.Timer">
+      <HintPath>/Applications/Unity/Hub/Editor/2022.3.22f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Threading.Timer.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Threading">
+      <HintPath>/Applications/Unity/Hub/Editor/2022.3.22f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Threading.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.ValueTuple">
+      <HintPath>/Applications/Unity/Hub/Editor/2022.3.22f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.ValueTuple.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Xml.ReaderWriter">
+      <HintPath>/Applications/Unity/Hub/Editor/2022.3.22f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Xml.ReaderWriter.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Xml.XDocument">
+      <HintPath>/Applications/Unity/Hub/Editor/2022.3.22f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Xml.XDocument.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Xml.XPath.XDocument">
+      <HintPath>/Applications/Unity/Hub/Editor/2022.3.22f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Xml.XPath.XDocument.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Xml.XPath">
+      <HintPath>/Applications/Unity/Hub/Editor/2022.3.22f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Xml.XPath.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Xml.XmlDocument">
+      <HintPath>/Applications/Unity/Hub/Editor/2022.3.22f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Xml.XmlDocument.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Xml.XmlSerializer">
+      <HintPath>/Applications/Unity/Hub/Editor/2022.3.22f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Xml.XmlSerializer.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Runtime.InteropServices.WindowsRuntime">
+      <HintPath>/Applications/Unity/Hub/Editor/2022.3.22f1/Unity.app/Contents/NetStandard/Extensions/2.0.0/System.Runtime.InteropServices.WindowsRuntime.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.ComponentModel.Composition">
+      <HintPath>/Applications/Unity/Hub/Editor/2022.3.22f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netfx/System.ComponentModel.Composition.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Core">
+      <HintPath>/Applications/Unity/Hub/Editor/2022.3.22f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netfx/System.Core.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Data">
+      <HintPath>/Applications/Unity/Hub/Editor/2022.3.22f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netfx/System.Data.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <HintPath>/Applications/Unity/Hub/Editor/2022.3.22f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netfx/System.Drawing.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.IO.Compression.FileSystem">
+      <HintPath>/Applications/Unity/Hub/Editor/2022.3.22f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netfx/System.IO.Compression.FileSystem.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Net">
+      <HintPath>/Applications/Unity/Hub/Editor/2022.3.22f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netfx/System.Net.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Numerics">
+      <HintPath>/Applications/Unity/Hub/Editor/2022.3.22f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netfx/System.Numerics.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization">
+      <HintPath>/Applications/Unity/Hub/Editor/2022.3.22f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netfx/System.Runtime.Serialization.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.ServiceModel.Web">
+      <HintPath>/Applications/Unity/Hub/Editor/2022.3.22f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netfx/System.ServiceModel.Web.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Transactions">
+      <HintPath>/Applications/Unity/Hub/Editor/2022.3.22f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netfx/System.Transactions.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Web">
+      <HintPath>/Applications/Unity/Hub/Editor/2022.3.22f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netfx/System.Web.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Windows">
+      <HintPath>/Applications/Unity/Hub/Editor/2022.3.22f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netfx/System.Windows.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <HintPath>/Applications/Unity/Hub/Editor/2022.3.22f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netfx/System.Xml.Linq.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Xml.Serialization">
+      <HintPath>/Applications/Unity/Hub/Editor/2022.3.22f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netfx/System.Xml.Serialization.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Xml">
+      <HintPath>/Applications/Unity/Hub/Editor/2022.3.22f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netfx/System.Xml.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System">
+      <HintPath>/Applications/Unity/Hub/Editor/2022.3.22f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netfx/System.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="mscorlib">
+      <HintPath>/Applications/Unity/Hub/Editor/2022.3.22f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netfx/mscorlib.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UniTask">
+      <HintPath>Library/ScriptAssemblies/UniTask.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEditor.UI">
+      <HintPath>Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UI">
+      <HintPath>Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="Openfort.Browser.Core.csproj" />
+    <ProjectReference Include="unity-webview.csproj" />
+  </ItemGroup>
+  <Import Project="Sdk.targets" Sdk="Microsoft.NET.Sdk" />
+  <ItemGroup>
+    <ProjectCapability Remove="LaunchProfiles" />
+    <ProjectCapability Remove="SharedProjectReferences" />
+    <ProjectCapability Remove="ReferenceManagerSharedProjects" />
+    <ProjectCapability Remove="ProjectReferences" />
+    <ProjectCapability Remove="ReferenceManagerProjects" />
+    <ProjectCapability Remove="COMReferences" />
+    <ProjectCapability Remove="ReferenceManagerCOM" />
+    <ProjectCapability Remove="AssemblyReferences" />
+    <ProjectCapability Remove="ReferenceManagerAssemblies" />
+  </ItemGroup>
+</Project>
