@@ -12,7 +12,7 @@ public class OpenfortController : MonoBehaviour
 {
 	public static OpenfortController Instance { get; private set; }
 
-	private const string PublishableKey = "pk_test_505bc088-905e-5a43-b60b-4c37ed1f887a";
+	private const string PublishableKey = "pk_test_01e8eb7c-1a89-5f97-b8de-60fb398c53d7";
 	private const string ShieldKey = "a4b75269-65e7-49c4-a600-6b5d9d6eec66";
 
 	[HideInInspector] public string accessToken;
@@ -118,8 +118,7 @@ public class OpenfortController : MonoBehaviour
 			PublishableKey,
 			ShieldKey,
 			thirdPartyProvider: "firebase",
-			getThirdPartyToken: getThirdPartyToken,
-			iframeUrl: "https://development-iframe.vercel.app"
+			getThirdPartyToken: getThirdPartyToken
 		);
 	}
 
