@@ -103,7 +103,7 @@ Enable Firebase, add your project ID and choose ***Save***:
 
 ![Alt text](https://blog-cms.openfort.io/uploads/unity_firebase_android_embedded_4be4bc7920.png?updated_at=2024-03-19T11:22:43.865Z)
 
-### [Add a Contract](https://dashboard.openfort.io/assets/new)
+### [Add a Contract](https://dashboard.openfort.io/contracts)
 
 Choose ***Add contract***:
 
@@ -113,7 +113,7 @@ This sample requires a contract to run. We use [0x38090d1636069c0ff1Af6bc1737Fb9
 
 ![Alt text](https://blog-cms.openfort.io/uploads/firebase_extension_unity_img_46_05a8645885.png?updated_at=2023-11-09T04:25:24.000Z) 
 
-### [Add a Policy](https://dashboard.openfort.io/policies/new)
+### [Add a Policy](https://dashboard.openfort.io/policies)
 
 Choose ***Add policy***:
 
@@ -243,9 +243,7 @@ Upon building and running the game on an Android device, the registration/login 
 Upon completing the above steps, your Unity game will be fully integrated with Openfort Embedded Smart Accounts and Firebase and Google Play Games. Always remember to test every feature before deploying to guarantee a flawless player experience.
 
 ## Get support
-If you found a bug or want to suggest a new [feature/use case/sample], please [file an issue](../../issues).
-
 If you have questions, comments, or need help with code, we're here to help:
-- on Twitter at https://twitter.com/openfortxyz
-- on Discord: https://discord.com/invite/t7x7hwkJF4
-- by email: support+youtube@openfort.io
+- on Twitter at https://x.com/openfort_hq
+- on Telegram: http://t.me/openfort
+- by email: support@openfort.io
